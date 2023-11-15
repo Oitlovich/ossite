@@ -92,4 +92,14 @@ footer{
 }
 .desc{
     color: #fff;
+    font-size: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
+.desc a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
 }
