@@ -1,10 +1,24 @@
 .main_sec{
     background-image: url(/public/images/Loki_pic.png);
 }
-.nav{
-    background-color: #272727;
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 15px;
+}
+.main_page{
+    background-image: url(/images/Loki_pic.png);
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .div_links{
@@ -40,16 +54,27 @@
 .text_link{
     margin: 0;
 }
-.header_input{
+.header_input input{
     border: 0px;
-    border-bottom: #E70D0D;
+    border-bottom: 2px solid #E70D0D;
+    background-color: transparent;
+    caret-color: #fff;
+    color: #fff;
+}
+input:focus{
+    outline: none;
+}
+.input_img{
+    transform: translateX(-20px);
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
 }
 footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: #151515;
-    height: 130px;
 }
 .footer_column1, .footer_column2{
     display: flex;
@@ -59,4 +84,12 @@ footer{
 .footer_link{
     color: #fff;
     text-decoration: none;
+}
+.film_name{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+}
+.desc{
+    color: #fff;
 }

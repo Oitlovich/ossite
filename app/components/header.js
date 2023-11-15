@@ -14,7 +14,7 @@ export default function Header() {
           </div>
           <div className='header_input'>
             <input placeholder='Поиск'/>
-            <Image src='/icons/Vector.svg' alt='' width={15} height={15}/>
+            <Image className='input_img' src='/icons/Vector.svg' alt='' width={15} height={15}/>
           </div>
           <a className='def_link' href='#'>
             <div className='auth_button'>

@@ -21,8 +21,10 @@ export default function RootLayout({ children }) {
         <section className='main_sec'>
           <Header/>
         </section>
-        <Footer/>
+        <main>
         {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   )
