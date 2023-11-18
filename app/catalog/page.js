@@ -5,9 +5,9 @@ export default function page() {
   return (
     <section className='catalog_page'>
         <div className='filter'>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className='filters'>
+                    
+            </div>
         </div>
         <div className='main_catalog'>
         </div>

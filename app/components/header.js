@@ -9,8 +9,8 @@ export default function Header() {
           <Image src='/icons/LogoOS.png' alt='' width={220} height={90}/>
           </a>
           <div className='div_links'>
-            <a className='def_link' href='#'>Главная</a>
-            <a className='def_link' href='#'>Каталог</a>
+            <a className='def_link' href='/main'>Главная</a>
+            <a className='def_link' href='/catalog'>Каталог</a>
           </div>
           <div className='header_input'>
             <input placeholder='Поиск'/>
