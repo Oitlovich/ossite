@@ -1,7 +1,7 @@
 .main_sec{
     background-image: url(/public/images/Loki_pic.png);
 }
-header {
+header{
     background-color: transparent;
     position: fixed;
     width: 100%;
@@ -21,6 +21,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+/* .navcat{
+    background-color: #151515;
+} */
 .div_links{
     display: flex;
     column-gap: 50px;
@@ -121,12 +124,68 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 85%;
+    width: 30%;
+    height: 80%;
 }
 .filters{
-    width: 90%;
+    width: 80%;
     height: 100%;
     border: 1px solid #E70D0D;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filt{
+    color: #fff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #E70D0D;
+    border-radius: 20px;
+    width: 90%;
+}
+.filt h1{
+    margin-left: 20px;
+    font-size: 35px;
+}
+.filt p{
+    margin: 0;
+    margin-left: 10px;
+}
+.filt_ul{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.main_catalog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    column-gap: 10%;
+}
+.film{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 80%;
+}
+.film h1{
+    font-size: 30px;
+}
+.film Image{
+    border-radius: 30px;
+}
+.undfilm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
 }
