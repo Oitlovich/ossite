@@ -25,6 +25,7 @@ export default function page() {
             </div>
         </div>
         <div className='main_catalog'>
+          <a href='/filmpage'>
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -34,6 +35,8 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -43,6 +46,9 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
+
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -52,6 +58,8 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -61,6 +69,9 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
+
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -70,6 +81,8 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
           <div className='film'>
             <Image src='/images/image 6.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
@@ -79,6 +92,29 @@ export default function page() {
               <p className='rating'>12+</p>
             </div>
           </div>
+          </a>
+          <a href='/filmpage'>
+          <div className='film'>
+            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
+            <h1>Локи</h1>
+            <div className='undfilm'>
+              <p className='year'>2021</p>
+              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
+              <p className='rating'>12+</p>
+            </div>
+          </div>
+          </a>
+          <a href='/filmpage'>
+          <div className='film'>
+            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
+            <h1>Локи</h1>
+            <div className='undfilm'>
+              <p className='year'>2021</p>
+              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
+              <p className='rating'>12+</p>
+            </div>
+          </div>
+          </a>
         </div>
     </section>
   )
