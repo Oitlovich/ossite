@@ -197,3 +197,14 @@ footer{
     justify-content: space-between;
     width: 80%;
 }
+/* .film_header_black{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+} */
+.film_header_image::after{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+}
