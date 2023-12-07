@@ -8,7 +8,6 @@ export default function Footer() {
           <div className='footer_column1'>
               <a className='footer_link' href='#'>Политика конфиденциальности</a>
               <a className='footer_link' href='#'>©  2024 Все права защищены</a>
-              <a className='footer_link' href='#'>Обратная связь</a>
           </div>
           <div className='footer_column2'>
               <a className='footer_link' href='#'>Главная</a>

@@ -1,5 +1,5 @@
 .main_sec{
-    background-image: url(/public/images/Loki_pic.png);
+    background-image: url(/public/images/BackgroundMando.jpg);
 }
 header{
     background-color: transparent;
@@ -8,7 +8,8 @@ header{
     top: 15px;
 }
 .main_page{
-    background-image: url(/images/Loki_pic.png);
+    background-image: url(/images/bg_mando.png);
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -38,37 +39,60 @@ header{
     color: #fff;
 } */
 .auth_button{
-  background-color: #E70D0D;
   display: flex;
   justify-content: center; 
   align-items: center;
   border-radius: 10px;
-  width: 100px;
+  border: 1px solid #fff;
+  width: 135px;
   height: 50px;
   transition: 0.2s;
   font-weight: 600;
 }
 .auth_button:hover{
     color: #fff;
-    font-size: 21px;
-    width: 105px;
-    height: 55px;
+}
+.auth_button_bg:hover{
+    z-index: 0;
+    border-radius: 10px;
+    opacity: 1;
+    border: 1px solid #fff;
+}
+.auth_button_bg{
+    opacity: 0.6;
+    border-radius: 10px;
+    background-color: #910707;
+    width: 135px;
+    height: 50px;
+    position: absolute;
+    transition: 0.2s;
 }
 .text_link{
     margin: 0;
+    z-index: 1;
 }
 .header_input input{
-    border: 0px;
-    border-bottom: 2px solid #E70D0D;
-    background-color: transparent;
+    border: 1px solid #fff;
+    background-color: #910707;
+    border-radius: 20px;
     caret-color: #fff;
     color: #fff;
+    font-size: 20px;
+    width: 306px;
+    height: 59px;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+.header_input input::placeholder{
+    transform: translateX(10px);
 }
 input:focus{
+    opacity: 0.9;
     outline: none;
 }
 .input_img{
-    transform: translateX(-20px);
+    transform: translateX(-40px);
+    margin-bottom: 10px;
 }
 footer .container{
     display: flex;
@@ -88,10 +112,15 @@ footer{
     color: #fff;
     text-decoration: none;
 }
+.film_main{
+    transform: translateX(-220px);
+    margin: 0;
+}
 .film_name{
     color: #fff;
-    font-size: 60px;
+    font-size: 160px;
     font-weight: 700;
+    margin: 0;
 }
 .desc{
     color: #fff;
@@ -115,7 +144,7 @@ footer{
 }
 .catalog_page{
     height: 100vh;
-    background-color: #151515;
+    background: linear-gradient(304deg, #060508 -5.18%, rgba(6, 5, 8, 0.92) 73.67%, rgba(6, 5, 8, 0.85) 91.03%, rgba(6, 5, 8, 0.76) 101.21%, rgba(6, 5, 8, 0.60) 106.59%, rgba(6, 5, 8, 0.00) 109.74%);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,7 +164,7 @@ footer{
 .filters{
     width: 80%;
     height: 100%;
-    border: 1px solid #E70D0D;
+    border: 2px solid #a9a9a9;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -147,9 +176,15 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #E70D0D;
     border-radius: 20px;
     width: 90%;
+}
+.filt_bg{
+    opacity: 0.5;
+    background-color: #a9a9a9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .filt h1{
     margin-left: 20px;
@@ -170,13 +205,12 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     column-gap: 10%;
-    height: 100%;
-    margin-top: 240px;
-    padding-bottom: 110px;
+}
+.film_mag{
+    border-radius: 20px;
+    border: 1px solid #fff;
 }
 .film{
     display: flex;
@@ -191,6 +225,7 @@ footer{
 .film Image{
     border-radius: 30px;
 }
+
 .undfilm{
     display: flex;
     flex-direction: row;

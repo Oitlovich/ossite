@@ -6,7 +6,7 @@ export default function page() {
     <section className='catalog_page'>
         <div className='filter'>
             <div className='filters'>
-              <div className='filt'> 
+              <div className='filt'>
                 <h1>Жанры</h1>
                 <label>
                   <ul className='filt_ul'><input type='checkbox'></input><p>Комедия</p></ul>
@@ -25,94 +25,16 @@ export default function page() {
             </div>
         </div>
         <div className='main_catalog'>
-          <a href='/filmpage'>
+          <a className='link_filmpage' href='/films/lokipage'>
           <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
+            <Image className='film_mag' src='/images/magazine_loki.png' alt='' width={220} height={300}/>
             <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
           </div>
           </a>
-          <a href='/filmpage'>
+          <a className='link_filmpage' href='/films/mandopage'>
           <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
-          </div>
-          </a>
-          <a href='/filmpage'>
-          <div className='film'>
-            <Image src='/images/image 6.png' alt='' width={220} height={300}/>
-            <h1>Локи</h1>
-            <div className='undfilm'>
-              <p className='year'>2021</p>
-              <Image src='/icons/Star.svg' alt='' width={10} height={10}/>
-              <p className='rating'>12+</p>
-            </div>
+            <Image className='film_mag' src='/images/35620-1000x830.jpg' alt='' width={220} height={300}/>
+            <h1>Мандолорец</h1>
           </div>
           </a>
         </div>
