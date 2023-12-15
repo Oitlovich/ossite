@@ -18,8 +18,7 @@ export default function Header() {
           </div>
           <a className='def_link' href='#'>
             <div className='auth_button'>
-              <p className='text_link'>Вход</p>
-              <div className='auth_button_bg'></div>
+              <div className='auth_button_bg'>Вход</div>
             </div>
           </a>
           </nav>

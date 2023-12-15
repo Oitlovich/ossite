@@ -4,16 +4,16 @@ export default function page() {
   return (
     <section className='lokipage'>
         <div className='header_filmpage'>
-        <div></div>
+          <div></div>
         </div>
         <div className='mainpart_filmpage'>
         <div className='left_side_filmpage'>
-          <Image></Image>
+          <div className='ls_fp_image'></div>
           <button>Добавить в избранное</button>
         </div>
         <div className='right_side_filmpage'>
           <div className='rs_text'>
-            <h1>Мандолорец</h1>
+            <h1>Loki</h1>
             <p>Какое то описание, описание, описание</p>
           </div>
           <div className='rs_middle'>
@@ -35,7 +35,7 @@ export default function page() {
           </div>
           </div>
         </div>
-        <div></div>
+        <div className='viewing'></div>
     </section>
   )
 }
