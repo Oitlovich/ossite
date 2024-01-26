@@ -6,19 +6,20 @@ export default function page() {
     <main>
       <section className='main_page'>
         <div className='left_part container'>
-          <div className='Logo_text'>
+          {/* <div className='Logo_text'>
             <p><span>O</span>itlovich</p>
             <div></div>
             <p><span>Studio</span></p>
-          </div>
-          <div><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p></div>
+          </div> */}
+          <Image className='main_logo' src="/icons/logo_main.png" width={523} height={222}></Image>
+          <div className='main_text'><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p></div>
           <div className='left_part_buttons'>
-            <a href=''>Регистрация</a>
-            <a href=''>Каталог</a>
+            <a className='button1' href='#'>Регистрация</a>
+            <a className='button2' href='#'>Каталог</a>
           </div>
         </div>
         <div className='right_part container'>
-          <Image src="/images/micromainpage.png"></Image>
+          <Image src="/images/micromainpage.png" width={910} height={760}></Image>
         </div>
       </section>
       <section className='command'>
@@ -27,16 +28,22 @@ export default function page() {
         </div>
         <div className='command_slider container'>
           <div className='command_element'>
-            <Image></Image>
-            <p>Александр Копаев</p>
+            <Image src="/images/Photo1.jpg" width={340} height={340}></Image>
+            <div>
+              <p>Александр Копаев</p>
+            </div>
           </div>
           <div className='command_element'>
-            <Image></Image>
-            <p>Никита Мальцев</p>
+            <Image src="/images/Photo2.jpg" width={340} height={340}></Image>
+            <div>
+              <p>Никита Мальцев</p>
+            </div>
           </div>
           <div className='command_element'>
-            <Image></Image>
-            <p>Сергей Малеев</p>
+            <Image src="/images/Photo3.jpg" width={340} height={340}></Image>
+            <div>
+              <p>Сергей Малеев</p>
+            </div>
           </div>
         </div>
       </section>
@@ -48,37 +55,37 @@ export default function page() {
         <div className='popular_main container'>
           <a href='#'>
             <div className='popular_element container'>
-              <Image src="" width={200} height={342}></Image>
-              <p></p>
-              <p></p>
+              <Image src="/images/Oderzhimost.png" width={200} height={342}></Image>
+              <p>Одержимость</p>
+              <p>2013</p>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
-              <Image src="" width={200} height={342}></Image>
-              <p></p>
-              <p></p>
+              <Image src="/images/loki.png" width={200} height={342}></Image>
+              <p>Локи</p>
+              <p>2021</p>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
-              <Image src="" width={200} height={342}></Image>
-              <p></p>
-              <p></p>
+              <Image src="/images/Uchitelnazamenu.png" width={200} height={342}></Image>
+              <p>Учитель на замену</p>
+              <p>2011</p>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
-              <Image src="" width={200} height={342}></Image>
-              <p></p>
-              <p></p>
+              <Image src="/images/Joker.png" width={200} height={342}></Image>
+              <p>Джокер</p>
+              <p>2021</p>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
-              <Image src="" width={200} height={342}></Image>
-              <p></p>
-              <p></p>
+              <Image src="/images/mandalorec.png" width={200} height={342}></Image>
+              <p>Мандалорец</p>
+              <p>2021</p>
             </div>
           </a>
         </div>
@@ -86,12 +93,12 @@ export default function page() {
       <section className='beginnings'>
         <div className='left_part_beginnings container'>
           <div className='section_header container'>
-            <h1><span>С</span>чего всё начиналось</h1>   
+            <h1><span>С</span> чего всё начиналось</h1>   
           </div>
-          <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p>
+          <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p>
         </div>
         <div className='right_part_beginnings container'>
-          <Image src="" width={333} height={436}></Image>
+          <Image src="/images/telegramm.png" width={333} height={436}></Image>
         </div>
       </section>
     </main>
