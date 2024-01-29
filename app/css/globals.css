@@ -82,9 +82,7 @@ nav{
     font-size: 21px;
     box-shadow: #268DC6 1px 1px 3px 1px;
 }
-span{
-    color: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
-}
+
 .left_part{
     justify-content: center;
     display: flex;
@@ -93,12 +91,16 @@ span{
 }
 section{
     background-color: #000;
+    padding-bottom: 195px;
     color: #fff;
 }
 .main_page{
     color: #fff;
     display: flex;
     flex-direction: row;
+}
+.main_sec{
+    padding: 0;
 }
 .main_text  {
     font-size: 24px;
@@ -126,6 +128,10 @@ section{
     width: 240px;
     height: 55px;
 }
+.button1{
+    border: none;
+    background: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
+}
 .command{
     display: flex;
     flex-direction: column;
@@ -135,6 +141,31 @@ section{
 .section_header{
     font-size: 52px;
 }
+.section_header p{
+    font-family: Sansation;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.section_header h1{
+    font-family: Sansation;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+span{
+    background: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Sansation;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .command_slider{
     display: flex;
     flex-direction: row;
@@ -142,14 +173,30 @@ section{
     justify-content: center;
     align-items: center;
 }
+.command_border{
+    border-radius: 10px;
+}
 .command_element{
     display: flex;
     flex-direction: column;
     padding: 12px;
-    border: 2px solid #00C7E6;
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
+    -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    border-image-slice: 1;
+    transition: 0.2s;
+}
+.command_image{
+    filter: grayscale(100%);
+    transition: 0.2s;
+    border-radius: 5px;
+}
+.command_element:hover .command_image{
+    filter: grayscale(0%);
 }
 .command_element div{
     display: flex;
@@ -159,6 +206,13 @@ section{
 }
 .command_element div p{
     margin: 0;
+    color: #FEFEFF;
+    text-align: center;
+    font-family: Sansation;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .popular{
     display: flex;
@@ -173,6 +227,13 @@ section{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.popular_header h1{
+    font-family: Sansation;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .popular_header a{
     color: #fff;
@@ -198,6 +259,29 @@ section{
 .popular_element p{
     margin: 0;
     font-size: 20px;
+    text-align: center;
+}
+.popular_element_text{
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    color: #FFF;
+    text-align: center;
+    font-family: Sansation;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+}
+.year{
+    background: linear-gradient(180deg, #9BBFFF 0%, #CC84FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Oswald;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
 }
 .beginnings{
     display: flex;
@@ -207,13 +291,20 @@ section{
 .left_part_beginnings{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
     gap: 50px;
 }
+.left_part_beginnings .section_header h1{
+    font-family: Sansation;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 155px;
+}
 .left_part_beginnings p{
-    font-size: 22px;
-    width: 700px;
-    font-weight: 100;
+    font-size: 32px;
+    width: 730px;
+    font-weight: 300;
 }
 .left_part_beginnings, .right_part_beginnings{
     margin-top: 50px;
@@ -228,10 +319,48 @@ section{
     margin-left: 280px;
 }
 footer{
+    width: 100%;
     height: 465px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: linear-gradient(180deg, #000 0%, #000001 8.59%, #000106 17.48%, #00010C 26.53%, #000216 35.61%, #000321 44.59%, #00042F 53.34%, #00063F 61.73%, #000851 69.63%, #000A65 76.9%, #000C7B 83.41%, #000E93 89.03%, #0010AC 93.63%, #0013C6 97.08%, #0015E2 99.25%, #0018FF 100%);
+    background: linear-gradient(180deg, #000 0%, #000001 8.59%, #000106 17.48%, #00010C 26.53%, #000216 35.61%, #000321 44.59%, #00042F 53.34%, #00063F 61.73%, #000851 69.63%, #000A65 76.9%, #000C7B 83.41%, #000E93 89.03%, #0010AC 93.63%, #0013C6 97.08%, #0015E2 99.25%, #0018FF 100%);
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    gap: 260px;
+}
+.footer_column{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #fff;
+}
+.footer_column a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2.6px;
+    text-decoration: none;
+}
+.container .footer_column:nth-child(2){
+    align-items: center;
+    justify-content: end;
+}
+.footer_column:nth-child(1) a:nth-child(1){
+    padding-bottom: 33px;
+
+}
+.container .footer_column:nth-child(3) a:nth-child(2){
+    padding-bottom: 73px;
+}
+.container .footer_column:nth-child(3){
+    text-align: end;
+}   
+.footer_column:nth-child(3) a:nth-child(1), .footer_column:nth-child(3) a:nth-child(2){
+    font-size: 24px;
+    letter-spacing: 3.12px;
+
 }

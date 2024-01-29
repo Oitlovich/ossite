@@ -27,20 +27,22 @@ export default function page() {
           <h1><span>К</span>оманда озвучки</h1>   
         </div>
         <div className='command_slider container'>
-          <div className='command_element'>
-            <Image src="/images/Photo1.jpg" width={340} height={340}></Image>
-            <div>
-              <p>Александр Копаев</p>
+          <div className='command_border'>
+            <div className='command_element'>
+              <Image className='command_image' src="/images/Photo1.jpg" width={340} height={340}></Image>
+              <div>
+                <p>Александр Копаев</p>
+              </div>
             </div>
           </div>
           <div className='command_element'>
-            <Image src="/images/Photo2.jpg" width={340} height={340}></Image>
+            <Image className='command_image' src="/images/Photo2.jpg" width={340} height={340}></Image>
             <div>
               <p>Никита Мальцев</p>
             </div>
           </div>
           <div className='command_element'>
-            <Image src="/images/Photo3.jpg" width={340} height={340}></Image>
+            <Image className='command_image' src="/images/Photo3.jpg" width={340} height={340}></Image>
             <div>
               <p>Сергей Малеев</p>
             </div>
@@ -56,43 +58,53 @@ export default function page() {
           <a href='#'>
             <div className='popular_element container'>
               <Image src="/images/Oderzhimost.png" width={200} height={342}></Image>
-              <p>Одержимость</p>
-              <p>2013</p>
+              <div className='popular_element_text'>
+                <p className='name'>Одержимость</p>
+                <p className='year'>2013</p>
+              </div>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
               <Image src="/images/loki.png" width={200} height={342}></Image>
-              <p>Локи</p>
-              <p>2021</p>
+              <div className='popular_element_text'>
+                <p className='name'>Локи</p>
+                <p className='year'>2021</p>
+              </div>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
               <Image src="/images/Uchitelnazamenu.png" width={200} height={342}></Image>
-              <p>Учитель на замену</p>
-              <p>2011</p>
+              <div className='popular_element_text'>
+                <p className='name'>Учитель на замену</p>
+                <p className='year'>2011</p>
+              </div>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
               <Image src="/images/Joker.png" width={200} height={342}></Image>
-              <p>Джокер</p>
-              <p>2021</p>
+              <div className='popular_element_text'>
+                <p className='name'>Джокер</p>
+                <p className='year'>2021</p>
+              </div>
             </div>
           </a>
           <a href='#'>
             <div className='popular_element container'>
               <Image src="/images/mandalorec.png" width={200} height={342}></Image>
-              <p>Мандалорец</p>
-              <p>2021</p>
+              <div className='popular_element_text'>
+                <p className='name'>Мандалорец</p>
+                <p className='year'>2021</p>
+              </div>
             </div>
           </a>
         </div>
       </section>
       <section className='beginnings'>
         <div className='left_part_beginnings container'>
-          <div className='section_header container'>
+          <div className='section_header'>
             <h1><span>С</span> чего всё начиналось</h1>   
           </div>
           <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p>

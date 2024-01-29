@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className='container'>
         <div className='footer_column'>
-          <a href='#'><Image></Image></a>
+        <a href='#'><Image src="/icons/NewOSLogo.png" width={133} height={64}></Image></a>
           <a href='#'>Главная</a>
           <a href='#'>Каталог</a>
         </div>
