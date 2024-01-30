@@ -8,8 +8,8 @@ export default function Header() {
             <Image src="/icons/NewOSLogo.png" width={133} height={60}></Image>
             <nav>
               <div className='header_links'>
-                <a href='#'><p>Главная</p></a>
-                <a href='#'><p>Каталог</p></a>
+                <a href='/main'><p>Главная</p></a>
+                <a href='/catalog'><p>Каталог</p></a>
               </div>
               <div className='header_search'>
                 <input placeholder='Поиск'></input>
