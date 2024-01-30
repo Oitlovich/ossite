@@ -110,7 +110,7 @@ export default function page() {
           <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века</p>
         </div>
         <div className='right_part_beginnings container'>
-          <Image src="/images/telegramm.png" width={333} height={436}></Image>
+          <a href='https://t.me/oitlovich_st'><Image className='telegram_image' src="/images/telegramm.png" width={333} height={436}></Image></a>
         </div>
       </section>
     </main>

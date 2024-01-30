@@ -93,6 +93,7 @@ section{
     background-color: #000;
     padding-bottom: 195px;
     color: #fff;
+    font-family: sansation;
 }
 .main_page{
     color: #fff;
@@ -260,6 +261,7 @@ span{
     margin: 0;
     font-size: 20px;
     text-align: center;
+    font-family: oswald;
 }
 .popular_element_text{
     display: flex;
