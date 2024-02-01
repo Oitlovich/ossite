@@ -171,37 +171,37 @@ export default function page() {
 
           <div className='catalog_objects'>
 
-            <a href='/loki'>
+            <a href='/filmpage'>
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/loki.png"></Image>
                 <p>Локи</p>
               </div>
             </a>
-            <a href='/infinity'>  
+            <a href='/filmpage'>  
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/loki.png"></Image>
                 <p>Бесконечность</p>
               </div>
             </a>
-            <a href='/oderzhimost'>
+            <a href='/filmpage'>
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/Oderzhimost.png"></Image>
                 <p>Одержимость</p>
               </div>
             </a>
-            <a href='/joker'>
+            <a href='/filmpage'>
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/Joker.png"></Image>
                 <p>Джокер</p>
               </div>
             </a>
-            <a href='/mandolorec'>
+            <a href='/filmpage'>
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/mandalorec.png"></Image>
                 <p>Мандалорец</p>
               </div>
             </a>
-            <a href='/prepodnazamenu'>
+            <a href='/filmpage'>
               <div className='film'>
                 <Image className='film_img' width={220} height={350} src="/images/Uchitelnazamenu.png"></Image>
                 <p>Учитель на замену</p>
