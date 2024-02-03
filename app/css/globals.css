@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "sansation"; 
+    src: url("/Sansation/Sansation-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+html{
+    font-family: sansation;
+}
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -93,7 +102,6 @@ section{
     background-color: #000;
     padding-bottom: 195px;
     color: #fff;
-    font-family: sansation;
 }
 .main_page{
     color: #fff;
@@ -363,12 +371,6 @@ span{
 .markers p{
     font-size: 24px;
     font-weight: 100;
-}
-
-.checkbox_custom{
-    border-radius: 7px;
-    background-color: #000;
-    width: 30px;
 }
 .checkbox_custom:checked{
     background-color: #0010AC;
