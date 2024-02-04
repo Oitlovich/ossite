@@ -52,7 +52,7 @@ export default function page() {
       <section className='popular'>
         <div className='popular_header container'>
           <h1><span>П</span>опулярное</h1>
-          <a href='#'>Показать больше</a>   
+          <a href='/catalog'>Показать больше</a>   
         </div>
         <div className='popular_main container'>
           <a href='#'>

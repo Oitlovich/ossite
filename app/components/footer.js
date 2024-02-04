@@ -14,9 +14,9 @@ export default function Footer() {
           <a href='#'>Авторизация</a>
         </div>
         <div className='footer_column'>
-          <a href=''>Политика конфиденциальности</a>
-          <a href=''>Обратная связь</a>
-          <a>© 2024 Все права защищены</a>
+          <a href='#'>Политика конфиденциальности</a>
+          <a href='#'>Обратная связь</a>
+          <a href='#'>© 2024 Все права защищены</a>
         </div>
       </div>
     </footer>

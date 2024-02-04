@@ -23,13 +23,19 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #00C7E6;
 }
+a{
+    transition: 0.2s;
+}
+header a:hover{
+    color: #00C7E6;
+}
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    background-color: #000;
+    background-color: transparent;
     flex-wrap: nowrap;
 }
 .header_mainpart, nav, .header_search, .header_links{
@@ -53,12 +59,16 @@ nav{
     margin-left: 50px;
     flex-direction: row;
 }
+.header_search svg{
+    cursor: pointer;
+}
 .header_search input{
     background-color: transparent;
     border: none;
     padding: 5px;
     color: #fff;
     font-size: 18px;
+    transition: 0.2s;
 }
 input:focus{
     outline: none;
@@ -86,12 +96,12 @@ input:focus{
     cursor: pointer;
     transition: 0.2s;
 }
-.autorisation_button:hover{
-    color: #fff;
-    font-size: 21px;
-    box-shadow: #268DC6 1px 1px 3px 1px;
+.autorisation_button:hover, .button_clean:hover, .film_favorite:hover{
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #00C7E6;
+    box-shadow: #268DC6 0px 0px 9px 1px;
 }
-
 .left_part{
     justify-content: center;
     display: flex;
@@ -133,11 +143,19 @@ section{
 }
 .button1, .button2{
     border: 2px solid #00C7E6;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 240px;
     height: 55px;
 }
-
+.button1:hover{
+    color: #fff;
+    box-shadow: #268DC6 0px 0px 9px 1px;
+}
+.button2:hover{
+    color: #fff;
+    font-size: 24px;
+    box-shadow: #268DC6 0px 0px 9px 1px;
+}
 .button1{
     border: none;
     background: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
@@ -229,6 +247,13 @@ span{
     flex-direction: column;
     gap: 30px;
 }
+.popular_header a:hover{
+    background: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s;
+}
 .popular_header, .section_header{
     margin-top: 50px;
 }
@@ -248,6 +273,7 @@ span{
 .popular_header a{
     color: #fff;
     font-size: 20px;
+    font-family: sansation;
     text-decoration: none;
 }
 .popular_main{
@@ -265,12 +291,18 @@ span{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: 0.2s;
+}
+
+.popular_element:hover p{
+    font-weight: 600;
+    color: #00C7E6;
 }
 .popular_element p{
     margin: 0;
     font-size: 20px;
     text-align: center;
-    font-family: oswald;
+    font-family: sansation;
 }
 .popular_element_text{
     display: flex;
@@ -350,6 +382,7 @@ span{
     -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
     border-image-slice: 1;
 }
+
 .filter_point{
     display: flex;
     flex-direction: column;
@@ -427,9 +460,16 @@ span{
     align-items: center;
     gap: 15px;
     font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 3.25px;
+    font-weight: 300;
+    letter-spacing: 2.25px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.catalog_objects a:hover{
+    color: #fff;
+}
+.catalog_objects a:hover .film{
+
 }
 .film_img{
     border: 2px solid transparent;
@@ -441,10 +481,12 @@ span{
 .button_clean{
     background-color: transparent;
     border: 2px solid #9BBFFF;
+    height: 50px;
     color: #fff;
     font-size: 24px;
-    font-weight: 600;
-    border-radius: 10px; 
+    font-weight: 400;
+    transition: 0.2s;
+    border-radius: 10px;
 }
 .main_part_film{
     display: flex;
@@ -502,6 +544,7 @@ span{
     color: #fff;
     border-radius: 7px;
     height: 50px;
+    transition: 0.2s;
 }
 .film_look .container{
     display: flex;
@@ -546,6 +589,11 @@ footer .container{
     flex-direction: row;
     gap: 260px;
 }
+.footer_column a:hover{
+    color: #fff;
+    letter-spacing: 4px;
+}
+
 .footer_column{
     display: flex;
     flex-direction: column;
@@ -565,7 +613,6 @@ footer .container{
 }
 .footer_column:nth-child(1) a:nth-child(1){
     padding-bottom: 33px;
-
 }
 .container .footer_column:nth-child(3) a:nth-child(2){
     padding-bottom: 73px;

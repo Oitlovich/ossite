@@ -1,6 +1,7 @@
 import Image from 'next/image'
 // import HeaderCat from '../components/headercatalog'
 import Footer from '../components/footer'
+import anime from 'animejs/lib/anime.es.js';
 export default function page() {
   return (
     <main>
@@ -74,7 +75,7 @@ export default function page() {
               <div className='filter_apply'>ЖАНР</div>
             </div>
             
-            <div className='catalog_view'>
+            {/* <div className='catalog_view'>
             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="12.4" height="12.4" rx="2" fill="url(#paint0_linear_315_202)"/>
             <rect x="18.5996" width="12.4" height="12.4" rx="2" fill="url(#paint1_linear_315_202)"/>
@@ -165,7 +166,7 @@ export default function page() {
             <rect x="12" y="24" width="30" height="7" rx="3.5" fill="white"/>
             </svg>
 
-            </div>
+            </div> */}
 
           </div>
 
