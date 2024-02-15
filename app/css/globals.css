@@ -4,8 +4,10 @@
     font-style: normal; 
     font-weight: normal; 
 }
-html{
+body, html{
     font-family: sansation;
+    scroll-behavior: smooth;
+    background-color: #000;
 }
 ::-webkit-scrollbar {
     width: 12px;
@@ -36,6 +38,7 @@ header{
     align-items: center;
     height: 100px;
     background-color: transparent;
+    font-family: sansation;
     flex-wrap: nowrap;
 }
 .header_mainpart, nav, .header_search, .header_links{
@@ -96,6 +99,54 @@ input:focus{
     cursor: pointer;
     transition: 0.2s;
 }
+/* --------------Авторизация---------------- */
+.autorisation, .registration{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sansation;
+}
+.registration .autorisation_button{
+    width: 300px;
+}
+.autorisation_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.autorisation_inputs .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 60%;
+    transition: .2s;
+}
+.inputs_link{
+    color: #969696;
+    font-weight: 200;
+    text-decoration: none;
+    font-size: 20px;
+}
+.inputs_link:hover{
+    color: #00C7E6;
+    letter-spacing: 0.5px;
+}
+.autorisation_inputs .inputs input{
+    background-color: #000;
+    border: none;
+    border-bottom: 1px solid #00C7E6;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+/* --------------Конец Авторизация---------------- */
+
 .autorisation_button:hover, .button_clean:hover, .film_favorite:hover{
     font-weight: 500;
     letter-spacing: 1px;
@@ -109,9 +160,9 @@ input:focus{
     gap: 70px;
 }
 section{
-    background-color: #000;
     padding-bottom: 195px;
     color: #fff;
+    background-color: #000;
 }
 .main_page{
     color: #fff;

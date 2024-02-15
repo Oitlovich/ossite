@@ -5,10 +5,10 @@ export default function Header() {
       <header>
         <div className='container'>
           <div className='header_mainpart'>
-            <Image src="/icons/NewOSLogo.png" width={133} height={60}></Image>
+            <a href='/'><Image src="/icons/NewOSLogo.png" width={133} height={60}></Image></a>
             <nav>
               <div className='header_links'>
-                <a href='/main'><p>Главная</p></a>
+                <a href='/'><p>Главная</p></a>
                 <a href='/catalog'><p>Каталог</p></a>
               </div>
               <div className='header_search'>
@@ -18,7 +18,7 @@ export default function Header() {
                 </svg>
               </div>
             </nav>
-            <a className='autorisation_button'>Войти</a>
+            <a href='/autorisation' className='autorisation_button'>Войти</a>
           </div>
         </div>
       </header>
