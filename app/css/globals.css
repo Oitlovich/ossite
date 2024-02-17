@@ -10,7 +10,7 @@ body, html{
     background-color: #000;
 }
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -18,7 +18,7 @@ body, html{
 }
 
 ::-webkit-scrollbar-thumb {
-    fill: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
+    background: #00C7E6;
     border-radius: 8px;
 }
 
@@ -623,7 +623,64 @@ span{
 .similar{
     padding: 0;
 }
-
+/* -----------------------Пользователь-------------------- */
+.userpage{
+    font-family: sansation;
+}
+.userpage_img img{
+    opacity: 0.4;
+}
+.change_back{
+    display: flex;
+    flex-direction: row;
+    width: 215px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 200;
+    gap: 25px;
+    height: 65px;
+    background-color: rgb(67, 66, 66);
+    position: relative;
+    top: -100px;
+    left: 1620px;
+    cursor: pointer;
+}
+.change_back p{
+    margin: 0;
+}
+.user_char{
+    position: absolute;
+    top: 670px;
+    left: 100px;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    gap: 40px;
+    align-items: flex-end;
+}
+.favorite_main_block .section_header{
+    padding-bottom: 20px;
+    margin-top: 0;
+}
+.favorite_films{
+    display: flex;
+    flex-direction: row;
+    gap: 130px;
+    justify-content: center;
+    align-items: center;
+    height: 579px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
+    -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    border-image-slice: 1;
+}
+.favorite_films a{
+    text-decoration: none;
+}
+/* -----------------------Пользователь-------------------- */
 
 
 footer{
