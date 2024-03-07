@@ -1,5 +1,5 @@
 export const getSerials = async () => {
-    const response = await fetch(`${process.env.DB_HOST}/api/films?populate=*`, { 
+    const response = await fetch(`${process.env.DB_HOST}/api/serials?populate=*`, { 
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

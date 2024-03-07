@@ -7,10 +7,11 @@ import { getSerials } from '@/services/serials';
 
 export default async function page() {
   const films = await getFilms();
-  console.log(films);
-  const serial = await getSerials();
+  console.log(films.data);
+  const serials = await getSerials();
+  console.log(serials);
   return (
-    <main>
+    <main className='container m-auto'>
       <section className='catalog'>
         <div className='catalog_left'>
           
@@ -19,49 +20,64 @@ export default async function page() {
             <div className='filter_point'>
               <p>Жанр</p>
               <div className='markers'>
-                <input name='genor' className='checkbox_custom' type='checkbox'></input>
-                <label for='genor'></label>
-                <p>Фантастика</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>Фантастика</label>                
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <label></label>
-                <p>Боевик</p>
+              <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>Боевик</label>  
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <label></label>
-                <p>Драма</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>Драма</label>  
               </div>
             </div>
             <div className='filter_point'>
               <p>Возраст</p>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>12+</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>18+</label>  
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>16+</p>
+              <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>12+</label>  
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>18+</p>
+              <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>6+</label>  
               </div>
             </div>
             <div className='filter_point'>
               <p>Год релиза</p>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>2000-2010</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>2000-2012</label>  
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>2010-2015</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>2012-2020</label>  
               </div>
               <div className='markers'>
-                <input type='checkbox'></input>
-                <p>2015-2024</p>
+                <label className='input_label_custom'>
+                  <label for='genor' className='custom_input'>
+                    <input id='genor' type="checkbox" className='option-input checkbox'/>
+                  </label>2020-...</label>  
               </div>
             </div>
             
@@ -70,7 +86,7 @@ export default async function page() {
         
         </div>
    
-        <div className='catalog_right container'>
+        <div className='catalog_right'>
 
           <div className='filter_names'>
             
@@ -86,10 +102,22 @@ export default async function page() {
           <div className='catalog_objects'>
 
               {films.data.map(film => (
-                <a href='/filmpage'>
+                <a href={`/catalog/${film.attributes.slug}`}>
                   <div className='film'>
+                    {console.log(film.attributes)}
                     <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
                     <p>{film.attributes.name}</p>
+                  </div>
+                </a>
+                
+              ))}
+            
+
+               {serials.data.map(serial => (
+                <a href='/filmpage'>
+                  <div className='film'>
+                    <Image className='film_img' width={220} height={350} src={serial.attributes.cover.data.attributes.url}></Image>
+                    <p>{serial.attributes.name}</p>
                   </div>
                 </a>
               ))}
