@@ -7,9 +7,7 @@ import { getSerials } from '@/services/serials';
 
 export default async function page() {
   const films = await getFilms();
-  console.log(films.data);
   const serials = await getSerials();
-  console.log(serials);
   return (
     <main className='container m-auto'>
       <section className='catalog'>
@@ -104,9 +102,8 @@ export default async function page() {
               {films.data.map(film => (
                 <a href={`/catalog/${film.attributes.slug}`}>
                   <div className='film'>
-                    {console.log(film.attributes)}
                     <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                    <p>{film.attributes.name}</p>
+                    <p className='film_name'>{film.attributes.name}</p>
                   </div>
                 </a>
                 
@@ -117,7 +114,7 @@ export default async function page() {
                 <a href='/filmpage'>
                   <div className='film'>
                     <Image className='film_img' width={220} height={350} src={serial.attributes.cover.data.attributes.url}></Image>
-                    <p>{serial.attributes.name}</p>
+                    <p className='film_name'>{serial.attributes.name}</p>
                   </div>
                 </a>
               ))}

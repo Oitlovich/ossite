@@ -10,7 +10,7 @@ export default async function page({params}) {
             
             <div className='left_part_film'>
                 <div className='film_image'>
-                    <Image className='film_img' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
+                    <Image className='' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
                 </div>
                 <button className='film_favorite'>В избранное</button>
             </div>
@@ -45,7 +45,7 @@ export default async function page({params}) {
                 <div className='similar_films'>
                     <a href='/filmpage'>
                         <div className='popular_element'>
-                            <Image className='film_img' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
+                            <Image className='' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
                             <div className='popular_element_text'>
                                 <p>{film.data[0].attributes.name}</p>
                             </div>

@@ -18,7 +18,7 @@ export default function Header() {
                 </svg>
               </div>
             </nav>
-            <a href='/autorisation' className='autorisation_button'>Войти</a>
+            <a href='/userpage/authorisation' className='authorisation_button'>Войти</a>
           </div>
         </div>
       </header>

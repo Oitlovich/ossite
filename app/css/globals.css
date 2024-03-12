@@ -32,11 +32,10 @@ body, html, main{
 -o-appearance: none;
 appearance: none;
 position: relative;
-height: 20px;
-width: 20px;
+height: 17px;
+width: 17px;
 transition: all 0.15s ease-out 0s;
 background: #ffffff;
-border: 1px solid #8d8d8d;
 color: #fff;
 cursor: pointer;
 display: inline-block;
@@ -53,11 +52,11 @@ background: #ccd2d9;
 background: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
 }
 .option-input:checked::before {
-width: 20px;
-height: 20px;
+width: 17px;
+height: 17px;
 display:flex;
 content: '✓';
-font-size: 15px;
+font-size: 10px;
 font-weight:bold;
 position: absolute;
 align-items:center;
@@ -91,6 +90,10 @@ header{
     background-color: transparent;
     font-family: sansation;
     flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    background: #000;
+    z-index: 9999;
 }
 .header_mainpart, nav, .header_search, .header_links{
     display: flex;
@@ -132,10 +135,13 @@ input:focus{
     text-decoration: none;
     font-size: 20px;
 }
+.left_part, .catalog_left, .catalog_right{
+    margin-top: 110px;
+}
 .header_links a p{
     margin: 0;
 }
-.autorisation_button{
+.authorisation_button{
     font-size: 20px;
     color: #fff;
     display: flex;
@@ -166,26 +172,39 @@ input:focus{
   }
 /* ----------Фиксированный нав---------- */
 /* --------------Авторизация---------------- */
-.autorisation, .registration{
+.authorisation, .registration{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     font-family: sansation;
+    padding: 0;
+    overflow-x: hidden;
 }
-.registration .autorisation_button{
-    width: 300px;
-}
-.autorisation_inputs{
+.authorisation_inputs{
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    margin-top: 100px;
-    justify-content: center;
+    gap: 50px;
     align-items: center;
-    width: 60%;
+    text-align: center;
+    justify-content: center;
+    background-color: #000;    
+    width: 40%;
+    height: 100vh;
 }
-.autorisation_inputs .inputs{
+.auth_video_block{
+    position: absolute !important;
+    z-index: 0;
+    width: 100% !important;
+    height: 100%;
+    top: 10px;
+    display: flex;
+    justify-content: end;
+}
+.registration .authorisation_button{
+    width: 300px;
+}
+.authorisation_inputs .inputs{
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -202,7 +221,7 @@ input:focus{
     color: #00C7E6;
     letter-spacing: 0.5px;
 }
-.autorisation_inputs .inputs input{
+.authorisation_inputs .inputs input{
     background-color: #000;
     border: none;
     border-bottom: 1px solid #00C7E6;
@@ -213,7 +232,7 @@ input:focus{
 }
 /* --------------Конец Авторизация---------------- */
 
-.autorisation_button:hover, .button_clean:hover, .film_favorite:hover{
+.authorisation_button:hover, .button_clean:hover, .film_favorite:hover{
     font-weight: 500;
     letter-spacing: 1px;
     color: #00C7E6;
@@ -416,8 +435,8 @@ span{
     gap: 45px;
 }
 .popular_main a{
-    color: #fff;
     text-decoration: none;
+    color: #fff;
 }
 .popular_element{
     display: flex;
@@ -427,9 +446,11 @@ span{
     gap: 10px;
     transition: 0.2s;
 }
+.popular_element p{
+    color: #fff;
+}
 
 .popular_element:hover p{
-    font-weight: 600;
     color: #00C7E6;
 }
 .popular_element p{
@@ -512,6 +533,10 @@ span{
     -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
     -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
     border-image-slice: 1;
+    transition: 0.3s;
+}
+.catalog_filter:hover{
+    box-shadow: #268DC6 0px 0px 9px 1px;
 }
 
 .filter_point{
@@ -519,8 +544,12 @@ span{
     flex-direction: column;
     padding-bottom: 20px;
 }
+.input_label_custom{
+    font-size: 23px;
+    width: 100%;
+}
 .filter_point p:nth-child(1){
-    font-size: 34px;
+    font-size: 29px;
     font-weight: 700;
 }
 .markers{
@@ -566,7 +595,7 @@ span{
     width: 25%;
     height: 50px;
     font-size: 24px;
-    border-radius: 25px;
+    border-radius: 10px;
     background: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
 }
 .catalog_view{
@@ -580,7 +609,8 @@ span{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 74px;
+    column-gap: 100px;
+    row-gap: 30px;
 }
 .catalog_objects a{
     text-decoration: none;
@@ -596,12 +626,21 @@ span{
     letter-spacing: 2.25px;
     cursor: pointer;
     transition: 0.2s;
+    transition: 0.2s;
+}
+/* .film p, .film_img{
+    transition: 0.2s;
+    filter: blur(3px);
+} */
+.film:hover p{
+    color: #00C7E6;
+    transition: 0.2s;
+}
+.film:hover .film_img, .film:hover .film_name{
+    filter: blur(0);
 }
 .catalog_objects a:hover{
     color: #fff;
-}
-.catalog_objects a:hover .film{
-
 }
 .film_img{
     border: 2px solid transparent;
@@ -609,6 +648,7 @@ span{
     -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
     -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
     border-image-slice: 1;
+    transition: 0.2s;
 }
 .button_clean{
     background-color: transparent;
@@ -623,7 +663,8 @@ span{
 .main_part_film{
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
+    padding-top: 150px;
+    gap: 70px;
 }
 .main_part_film .container{
     display: flex;
