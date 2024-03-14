@@ -1,6 +1,6 @@
 import Image from 'next/image'
 // import HeaderCat from '../components/headercatalog'
-import Footer from '../components/footer'
+import Footer from '../../components/footer'
 import { getFilms } from '@/services/films';
 import { getSerials } from '@/services/serials';
 

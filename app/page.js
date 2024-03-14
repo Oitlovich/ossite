@@ -1,13 +1,12 @@
 import Image from 'next/image'
-import Header from './components/header'
-import Footer from './components/footer'
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { getActors } from '@/services/actors';
 import { getFilms } from '@/services/films';
-// const swiper = new Swiper(...);
-// window.pageYOffset > 100 ? nav.classList.remove("nav_bar_section_nodisplay") : nav.classList.add("nav_bar_section_nodisplay")
+import Swiper from '@/components/swiper';
+import SwiperActors from '@/components/swiper';
+
 export default async function page() {
   const films = await getFilms();
+  const actors = await getActors();
 
   return (
     <main>
@@ -30,44 +29,8 @@ export default async function page() {
           </div>
         
         </section>
-        <section className='command'>
-          
-          <div className='section_header'>
-            <h1><span>К</span>оманда озвучки</h1>   
-          </div>
-          
-          <div className='command_slider slider '>
-          
-            <div className='command_border slider-wrapper'>
-          
-              <div className='command_element swiper-slide'>
-                <Image className='command_image' src="/images/Photo1.jpg" width={340} height={340}></Image>
-                <div>
-                  <p>Александр Копаев</p>
-                </div>
-              </div>
-          
-              <div className='command_element swiper-slide'>
-                <Image className='command_image' src="/images/Photo2.jpg" width={340} height={340}></Image>
-                <div>
-                  <p>Никита Мальцев</p>
-                </div>
-              </div>
-          
-              <div className='command_element swiper-slide'>
-                <Image className='command_image' src="/images/Photo3.jpg" width={340} height={340}></Image>
-                <div>
-                  <p>Сергей Малеев</p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-          </div>
-        </section>
+        <SwiperActors actors={actors} DB_HOST={process.env.DB_HOST}/>
+      {/* ------------------------------- */}
         <section className='popular'>
           <div className='popular_header '>
             <h1><span>П</span>опулярное</h1>
