@@ -10,7 +10,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-
         <body>
         
         <section className='main_sec'>

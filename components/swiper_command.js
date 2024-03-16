@@ -1,11 +1,11 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import Image from 'next/image';
 
 export default function SwiperActors({actors, DB_HOST}){
-    // console.log(process.env.DB_HOST)
 
     return(
         <section className="command">

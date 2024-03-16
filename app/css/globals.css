@@ -4,9 +4,21 @@
 
 @font-face {
     font-family: "sansation"; 
-    src: url("/Sansation/Sansation-Regular.ttf") format("truetype"); 
+    src: url("/types/Sansation/Sansation-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
+}
+@font-face {
+    font-family: "sansation_light"; 
+    src: url("/types/Sansation/Sansation-Light.ttf") format("truetype"); 
+    font-style: light; 
+    font-weight: 300; 
+}
+@font-face {
+    font-family: "bruno_ace"; 
+    src: url("/types/Bruno_Ace/BrunoAce-Regular.ttf") format("truetype"); 
+    font-style: bold; 
+    font-weight: 500; 
 }
 body, html, main{
     font-family: sansation;
@@ -269,6 +281,7 @@ section{
 }
 .right_part_img1{
     right: 130px;
+    top: 90px;
 }
 .right_part_img2{
     right: 180px;
@@ -277,9 +290,10 @@ section{
 .main_sec{
     padding: 0;
 }
-.main_text  {
+.main_text{
     font-size: 24px;
     width: 70%;
+    font-family: sansation_light;
 }
 .left_part_buttons{
     display: flex;
@@ -491,12 +505,15 @@ span{
 .beginnings{
     display: flex;
     flex-direction: row;
-    gap: 230px;
+    justify-content: space-between;
 }
 .left_part_beginnings{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start !important;
+    gap: 30px;
+    width: 60%;
 }
 .left_part_beginnings .section_header h1{
     font-family: Sansation;
@@ -506,9 +523,8 @@ span{
     line-height: normal;
 }
 .left_part_beginnings p{
-    font-size: 32px;
-    width: 730px;
-    font-weight: 300;
+    font-family: sansation_light;
+    font-size: 28px;
 }
 .left_part_beginnings, .right_part_beginnings{
     margin-top: 50px;
@@ -641,8 +657,12 @@ span{
     color: #00C7E6;
     transition: 0.2s;
 }
-.film:hover .film_img{
+.film:hover .film_img, .beginnings_img_link:hover .telegram_image{
     box-shadow: #268DC6 0px 0px 15px 1px;
+}
+.telegram_image{
+    border-radius: 10px;
+    transition: 0.2s;
 }
 .catalog_objects a:hover{
     color: #fff;
@@ -820,12 +840,8 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    font-family: sansation_light;
     background: linear-gradient(180deg, #000 0%, #000001 8.59%, #000106 17.48%, #00010C 26.53%, #000216 35.61%, #000321 44.59%, #00042F 53.34%, #00063F 61.73%, #000851 69.63%, #000A65 76.9%, #000C7B 83.41%, #000E93 89.03%, #0010AC 93.63%, #0013C6 97.08%, #0015E2 99.25%, #0018FF 100%);
-}
-footer .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 .footer_column a:hover{
     color: #fff;
@@ -861,3 +877,124 @@ footer .container{
     font-size: 24px;
 }
 /* --------------Подвал--------- */
+.mobile_none{
+    display: none !important;
+}
+@media (max-width: 576px){
+    .container{
+        width: 95%;
+    }
+    section{
+        padding-bottom: 30px;
+    }
+    .mobile_none{
+        display: none !important;
+    }
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #000;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #00C7E6;
+        border-radius: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00C7E6;
+    }
+    .right_part_img1{
+        opacity: 0.2;
+        top: 100px;
+        right: 30px;
+        width: 90%;
+    }
+    .left_part{
+        position: relative;
+        z-index: 1;
+        gap: 0;
+        margin-left: 5%;
+        width: 90%;
+    }
+    .logo_mobile, .footer_logo{
+        font-size: 50px;
+        text-align: center;
+        font-family: bruno_ace;
+        margin-top: 20px;
+    }
+    .logo_mobile span{
+        font-family: bruno_ace;
+        font-size: 70px;
+    }
+    .logo_span_text{
+        font-family: bruno_ace;
+        /* background: linear-gradient(180deg, #199fce  0%, #850a88 100%) !important;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal; */
+    }
+    .logo_studio_text{
+        font-size: 50px !important;
+    }
+    .main_text{
+        width: 100%;
+    }
+    .main_text p{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .left_part_buttons{
+        justify-content: space-around;
+        gap: 0;
+        margin-top: 50px;
+    }
+    .button1, .button2{
+        width: 40%;
+    }
+    .mobile_block svg{
+        fill: #fff;
+        width: 50px;
+    }
+    .header_mainpart{
+        justify-content: space-between;
+    }
+    .popular, .header_mainpart nav, .authorisation_button, .filter_names, .catalog_left{
+        display: none;
+    }
+    .section_header h1{
+        font-size: 45px;
+    }
+    .swiper-slide{
+        padding-left: 90px;
+        width: 80% !important;
+    }
+    .left_part_beginnings, .right_part_beginnings{
+        width: 100%;
+    }
+    .right_part_beginnings{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .footer_row{
+        color: #fff;
+        font-size: 20px;
+    }
+    .footer_row_column{
+        font-size: 26px;
+    }
+    .footer_logo{
+        font-size: 30px;
+    }
+    .catalog_objects{
+        justify-content: space-between;
+    }
+    .catalog_objects a{
+        width: 40%;
+    }
+}
