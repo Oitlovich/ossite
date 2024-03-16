@@ -1,5 +1,10 @@
 import Image from "next/image"
-export default function page() {
+import { getFilms } from "@/services/films"
+import { getSerials } from "@/services/serials"
+
+export default async function page() {
+  const film = await getFilms();
+
     return (
       <main className="userpage">
         <section className="userpage_img">
@@ -18,45 +23,21 @@ export default function page() {
             <p>Почта_пользователя@mail.ru</p>
           </div>
         </div>
-        <section className="userpage_favorite">
-          <div className="favorite_main_block container">
-            <div className='section_header container'>
+        <section className="userpage_favorite container m-auto">
+         
+          <div className="favorite_main_block">
+            
+            <div className='section_header'>
               <h1><span>И</span>збранное</h1>   
             </div>
-              <div className="favorite_films">
-                <a href='/filmpage'> 
-                    <div className='popular_element container'>
-                        <Image src="/images/Oderzhimost.png" width={200} height={342}></Image>
-                        <div className='popular_element_text'>
-                            <p className='name'>Одержимость</p>
-                            <p className='year'>2013</p>
-                        </div>
-                    </div>
-                </a>
+         
+            <div className="favorite_films">
                 
-                <a href='/filmpage'>
-                    <div className='popular_element container'>
-                        <Image src="/images/Uchitelnazamenu.png" width={200} height={342}></Image>
-                        <div className='popular_element_text'>
-                            <p className='name'>Учитель на замену</p>
-                            <p className='year'>2011</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href='/filmpage'>
-                    <div className='popular_element container'>
-                        <Image src="/images/Joker.png" width={200} height={342}></Image>
-                        <div className='popular_element_text'>
-                            <p className='name'>Джокер</p>
-                            <p className='year'>2021</p>
-                        </div>
-                    </div>
-                </a>
             </div>
           </div>
                 
         </section>
+
       </main>
     )
   }

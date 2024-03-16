@@ -95,6 +95,10 @@ export default async function page() {
               <div className='filter_apply'>ЖАНР</div>
             </div>
 
+            <div className='mobile_block'>
+              <button className='filter_apply'>Фильтры</button>
+            </div>
+
           </div>
 
           <div className='catalog_objects'>

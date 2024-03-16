@@ -877,12 +877,15 @@ footer{
     font-size: 24px;
 }
 /* --------------Подвал--------- */
-.mobile_none{
+/* .mobile_none{
+    display: none !important;
+} */
+.mobile_block{
     display: none !important;
 }
 @media (max-width: 576px){
     .container{
-        width: 95%;
+        width: 85%;
     }
     section{
         padding-bottom: 30px;
@@ -961,14 +964,17 @@ footer{
         fill: #fff;
         width: 50px;
     }
+    .mobile_block{
+        display: flex !important;
+    }
     .header_mainpart{
         justify-content: space-between;
     }
-    .popular, .header_mainpart nav, .authorisation_button, .filter_names, .catalog_left{
+    .popular, .header_mainpart nav, .authorisation_button, .filter_applyes, .catalog_left{
         display: none;
     }
-    .section_header h1{
-        font-size: 45px;
+    .section_header h1, .left_part_beginnings .section_header h1{
+        font-size: 42px;
     }
     .swiper-slide{
         padding-left: 90px;
@@ -995,6 +1001,62 @@ footer{
         justify-content: space-between;
     }
     .catalog_objects a{
-        width: 40%;
+        width: 39%;
+    }
+    .filter_apply{
+        width: 215px;
+    }
+    .catalog_right{
+        gap: 30px;
+    }
+    .main_part_film{
+        flex-direction: column;
+    }
+    .left_part_film{
+        width: 75%;
+        margin-left: 60px;
+    }
+    .film_image img{
+        height: auto;
+    }
+    .text_block1{
+        text-align: center;
+    }
+    .film_look .container{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    .userpage_img img{
+        height: 40vh;
+    }
+    .change_back{
+        top: -85px;
+        left: 325px;
+        height: 55px;
+    }
+    .user_char{
+        position: inherit;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .user_char img{
+        width: 30%;
+    }
+    .user_char_text h1{
+        font-size: 30px;
+    }
+    .user_char_text p{
+        font-size: 20px;
+        opacity: 0.5;
+        font-family: sansation_light;
+    }
+    .favorite_films{
+        border: none;
+        height: auto;
+    }
+    .favorite_main_block .section_header{
+        text-align: center;
+        margin-top: 30px;
     }
 }
