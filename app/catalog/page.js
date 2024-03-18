@@ -13,7 +13,7 @@ export default async function page() {
       <section className='catalog'>
         <div className='catalog_left'>
           
-          <div className='catalog_filter'>
+          <form className='catalog_filter'>
           
             <div className='filter_point'>
               <p>Жанр</p>
@@ -79,8 +79,8 @@ export default async function page() {
               </div>
             </div>
             
-            <button className='button_clean'>Сбросить</button>
-          </div>          
+            <button className='button_clean' type='reset'>Сбросить</button>
+          </form>          
         
         </div>
    

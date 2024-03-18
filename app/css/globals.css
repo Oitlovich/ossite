@@ -90,6 +90,7 @@ z-index: 100;
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: sansation_light;
 }
 a{
     transition: 0.2s;
@@ -122,14 +123,15 @@ nav{
 .header_links{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 35%;
+    justify-content: center;
+    gap: 125px;
+    width: 45%;
     margin-left: 50px;
 }
 .header_search{
     border-bottom: 1px solid #00C7E6;
     display: flex;
-    margin-left: 50px;
+    margin-left: 150px;
     flex-direction: row;
 }
 .header_search svg{
@@ -703,6 +705,16 @@ span{
     flex-direction: column;
     gap: 15px;
 }
+.left_part_film{
+    width: 120vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.film_image_slug img{
+    width: 100%;
+    height: auto;
+}
 .film_image img{
     width: 455px;
     height: 716px;
@@ -766,12 +778,13 @@ span{
     display: flex;
     flex-direction: row;
     gap: 50px;
+    margin-top: 45px;
 }
 .similar_films a{
     text-decoration: none;
 }
 .similar{
-    padding: 0;
+    /* padding: 0; */
 }
 /* -----------------------Пользователь-------------------- */
 .userpage{
@@ -865,7 +878,7 @@ footer{
     justify-content: end;
 }
 .footer_column:nth-child(1) a:nth-child(1){
-    padding-bottom: 33px;
+    padding-bottom: 51px;
 }
 .container .footer_column:nth-child(3) a:nth-child(2){
     padding-bottom: 73px;
@@ -875,6 +888,11 @@ footer{
 }   
 .footer_column:nth-child(3) a:nth-child(1), .footer_column:nth-child(3) a:nth-child(2){
     font-size: 24px;
+}
+footer .mobile_none{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /* --------------Подвал--------- */
 /* .mobile_none{
