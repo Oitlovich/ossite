@@ -5,6 +5,7 @@ import { getFilms } from '@/services/films';
 
 export default async function page({params}) {
     const film = await getFilm(params.slug);
+    console.log(film.attributes)
     const films = await getFilms();
   return (
     <main className='container m-auto'>
@@ -30,7 +31,7 @@ export default async function page({params}) {
         <section className='film_look'>
                 
                 <div className='container'>
-
+                    <video>{film.data[0].attributes.video}</video>
                 </div>
         
         </section>
