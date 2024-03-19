@@ -1,7 +1,4 @@
 import Image from 'next/image'
-// import HeaderCat from '../components/headercatalog'
-import Footer from '../../components/footer'
-import anime from 'animejs/lib/anime.es.js';
 import { getFilms } from '@/services/films';
 import { getSerials } from '@/services/serials';
 
@@ -104,6 +101,7 @@ export default async function page() {
           <div className='catalog_objects'>
 
               {films.data.map(film => (
+                
                 <a href={`/catalog/${film.attributes.slug}`}>
                   <div className='film'>
                     <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
@@ -111,16 +109,6 @@ export default async function page() {
                   </div>
                 </a>
                 
-              ))}
-            
-
-               {serials.data.map(serial => (
-                <a href='/filmpage'>
-                  <div className='film'>
-                    <Image className='film_img' width={220} height={350} src={serial.attributes.cover.data.attributes.url}></Image>
-                    <p className='film_name'>{serial.attributes.name}</p>
-                  </div>
-                </a>
               ))}
 
             {/* <a href='/filmpage'>

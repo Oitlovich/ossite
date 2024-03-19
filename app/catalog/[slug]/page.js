@@ -1,11 +1,9 @@
 import Image from 'next/image'
-import { getSerials } from '@/services/serials';
 import { getFilm } from '@/services/films';
 import { getFilms } from '@/services/films';
 
 export default async function page({params}) {
     const film = await getFilm(params.slug);
-    console.log(film.attributes)
     const films = await getFilms();
   return (
     <main className='container m-auto'>
@@ -42,7 +40,6 @@ export default async function page({params}) {
                 
                 <div className='section_header'>
                     <h1><span>П</span>охожее</h1>
-                    <a href='/catalog'></a>
                 </div>
 
                 <div className='similar_films'>
@@ -55,14 +52,6 @@ export default async function page({params}) {
                             </div>
                         </a>
                     ))}
-                    {/* <a href='/filmpage'>
-                        <div className='popular_element'>
-                            <Image className='' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
-                            <div className='popular_element_text'>
-                                <p>{film.data[0].attributes.name}</p>
-                            </div>
-                        </div>
-                    </a> */}
                     
                 </div>
             </div>

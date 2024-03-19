@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { Searcher } from './search'
+import { getFilms } from '@/services/films'
 
-export default function Header() {
+export default async function Header() {
+  const films = await getFilms();
   return (
       <header>
         <div className='container'>
@@ -12,7 +14,7 @@ export default function Header() {
                 <a href='/'><p>Главная</p></a>
                 <a href='/catalog'><p>Каталог</p></a>
               </div>
-              <Searcher/>
+              <Searcher dropped_catalog = {films} DB_HOST = {process.env.DB_HOST}/>
             </nav>
             <a href='/userpage/authorisation' className='authorisation_button'>Войти</a>
             <div className='mobile_block'>
