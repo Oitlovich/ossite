@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { getActors } from '@/services/actors';
 import { getFilms } from '@/services/films';
-import SwiperActors from '@/components/swiper_command';
-import Banner from '@/components/banner';
-import Popular from '@/components/popular';
-import Beginnings from '@/components/beginnings';
+import SwiperActors from '@/components/index-page/swiper_command';
+import Banner from '@/components/index-page/banner';
+import Popular from '@/components/index-page/popular';
+import Beginnings from '@/components/index-page/beginnings';
 // import SwiperPopular from '@/components/swiper_popular';
 
 export default async function page() {

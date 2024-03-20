@@ -23,7 +23,7 @@ export function Searcher({dropped_catalog, DB_HOST}){
                         if(film.attributes.name.toLowerCase().includes(values.toLowerCase().trim())){
                             return(
                                 <a href={`/catalog/${film.attributes.slug}`}>
-                                    <hr className="dropped_hr my-[10px] bg-[#00C7E6] h-[2px]"/>
+                                    <hr className="dropped_hr my-[15px] bg-[#000] h-[2px]"/>
                                     <div className='dropped_film_card flex flex-row justify-between'>
                                         <div className="w-[50%] flex justify-center items-center">
                                             <Image className='dropped_film_img w-[70%]' width={220} height={350} src={DB_HOST+film.attributes.cover.data.attributes.url}></Image>
@@ -32,7 +32,7 @@ export function Searcher({dropped_catalog, DB_HOST}){
                                             <p className='dropped_film_name text-[23px]'>{film.attributes.name}</p>
                                         </div>
                                     </div>
-                                    <hr className="dropped_hr my-[10px] bg-[#00C7E6] h-[2px]"/>
+                                    <hr className="dropped_hr mt-[15px] bg-[#000] h-[2px]"/>
                                 </a>
                             )
                         }

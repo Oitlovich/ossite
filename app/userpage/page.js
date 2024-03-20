@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { getFilms } from "@/services/films"
-import { getSerials } from "@/services/serials"
 
 export default async function page() {
   const film = await getFilms();
@@ -8,35 +7,50 @@ export default async function page() {
     return (
       <main className="userpage">
         <section className="userpage_img">
-          <Image className="aspect-video w-[100%] h-[100vh] object-cover" src="/images/guitar_back.png" width={1872} height={700}></Image>
+          <div className="logo_mobile pt-[160px] items-center justify-center flex flex-col">
+            <div className="mr-[70px] text-[84px]"><span className="logo_span_text text-[124px]">O</span>itlovich</div>
+            <div className="header_line h-[2px] bg-[#fff] w-[50%]"></div>
+            <div className="logo_span_text ml-[230px]"><span className="logo_studio_text text-[74px]">Studio</span></div>
+          </div>
+          {/* <Image className="aspect-video w-[100%] h-[100vh] object-cover" src="/images/guitar_back.png" width={1872} height={700}></Image>
           <div className="change_back z-5 z-5 absolute ">
             <p>Изменить фон</p>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 10.4259C0 16.0386 4.6683 20.5998 10.4013 20.5998C13.0426 20.5998 15.4586 19.6285 17.2963 18.0363L23.9251 24.5202C24.0479 24.6403 24.2066 24.7004 24.3704 24.7004C24.5342 24.7004 24.6929 24.6403 24.8157 24.5202C25.0614 24.2799 25.0614 23.8943 24.8157 23.654L18.1818 17.1701C19.8096 15.3727 20.8026 13.0144 20.8026 10.4259C20.8026 4.8132 16.1343 0.251953 10.4013 0.251953C4.6683 0.251953 0 4.8132 0 10.4259ZM19.5485 10.4259C19.5485 15.3576 15.4433 19.3731 10.4013 19.3731C5.35934 19.3731 1.2541 15.3576 1.2541 10.4259C1.2541 5.49413 5.35934 1.47863 10.4013 1.47863C15.4433 1.47863 19.5485 5.48912 19.5485 10.4259Z" fill="white"/>
             </svg>
-          </div>
+          </div> */}
         </section>
-        <div className="user_char">
-          <Image className="avatar_circle" alt="Аватар пользователя" src="/images/userpage_avatar.png" width={255} height={255}></Image>
-          <div className="user_char_text"> 
-            <h1>Имя пользователя</h1>
-            <p>Почта_пользователя@mail.ru</p>
+        <div className="container m-auto">
+          <div className="user_char my-[100px]">
+            <div className="avatar_circle">
+              <svg className="avatar_camera hidden" id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m512 445.605c0 13.39-10.889 24.276-24.279 24.276h-463.448c-13.39 0-24.273-10.887-24.273-24.276v-307.498c0-13.389 10.883-24.277 24.273-24.277h117.683c3.657 0 6.935-2.256 8.243-5.671l25.28-66.041h161.044l25.274 66.042c1.307 3.416 4.585 5.67 8.242 5.67h117.683c13.389 0 24.279 10.886 24.279 24.277v307.498zm-256-309.262c-76.911 0-139.475 62.565-139.475 139.475 0 76.911 62.564 139.476 139.475 139.476s139.475-62.565 139.475-139.476c-.001-76.91-62.564-139.475-139.475-139.475zm0 243.64c57.43 0 104.163-46.73 104.163-104.166 0-57.434-46.733-104.165-104.163-104.165-57.436 0-104.169 46.73-104.169 104.165 0 57.436 46.733 104.166 104.169 104.166z" fill-rule="evenodd" fill="#fff"></path></svg>
+              <Image alt="Аватар пользователя" src="/images/userpage_avatar.png" width={165} height={135}></Image>
+            </div>
+            <div className="user_char_text"> 
+              <h1 className="text-[40px]">Имя пользователя</h1>
+              <label for="user_email" className="flex flex-row items-center">
+                <input id="user_email" className="text-[20px] w-[100%] bg-[#000]" value="Почта_пользователя@mail.ru"/>
+                <svg fill="#808080" width="25px" height="25px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.281 9.25l-2.125 2.156c0.563 0.875 0.969 1.875 1.156 2.938h3.094v3.313h-3.094c-0.188 1.063-0.594 2.031-1.156 2.906l2.125 2.188-2.344 2.344-2.156-2.156c-0.875 0.563-1.844 1-2.906 1.188v3.063h-3.344v-3.063c-1.063-0.188-2.031-0.625-2.906-1.188l-2.188 2.156-2.313-2.344 2.125-2.188c-0.563-0.875-1-1.844-1.188-2.906h-3.063v-3.313h3.063c0.188-1.063 0.625-2.063 1.188-2.938l-2.125-2.156 2.313-2.344 2.188 2.156c0.875-0.563 1.844-1 2.906-1.188v-3.094h3.344v3.094c1.063 0.188 2.031 0.625 2.906 1.188l2.156-2.156zM11.188 20.625c2.563 0 4.656-2.063 4.656-4.625s-2.094-4.656-4.656-4.656-4.594 2.094-4.594 4.656 2.031 4.625 4.594 4.625z"></path>
+                </svg>              
+                </label>
+            </div>
           </div>
+          <section className="userpage_favorite container m-auto">
+          
+            <div className="favorite_main_block">
+              
+              <div className='section_header'>
+                <h1><span>И</span>збранное</h1>   
+              </div>
+          
+              <div className="favorite_films">
+                  
+              </div>
+            </div>
+                  
+          </section>
         </div>
-        <section className="userpage_favorite container m-auto">
-         
-          <div className="favorite_main_block">
-            
-            <div className='section_header'>
-              <h1><span>И</span>збранное</h1>   
-            </div>
-         
-            <div className="favorite_films">
-                
-            </div>
-          </div>
-                
-        </section>
 
       </main>
     )

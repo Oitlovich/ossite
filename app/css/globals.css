@@ -150,8 +150,10 @@ nav{
 }
 .dropped_hr{
     transition: 0.2s;
+    background: #000;
 }
 .dropped_search a:hover .dropped_hr{
+    background: #00C7E6;
     -webkit-box-shadow: 0px 18px 19px 8px #00C7E6;
     -moz-box-shadow: 0px 18px 19px 8px #00C7E6;
     box-shadow: 0px 1px 18px 3px #00C7E6;
@@ -794,15 +796,25 @@ span{
 .similar_films a{
     text-decoration: none;
 }
-.similar{
-    /* padding: 0; */
-}
 /* -----------------------Пользователь-------------------- */
 .userpage{
     font-family: sansation;
 }
+.logo_mobile, .logo_mobile span{
+    font-family: bruno_ace;
+}
+.userpage_img{
+    border-bottom: 2px solid #00C7E6;
+}
 .userpage_img img{
     opacity: 0.4;
+}
+.user_char_text input{
+    color: #aaaaaa;
+    font-family: sansation_light;
+}
+.user_char_text svg{
+    cursor: pointer;
 }
 .change_back{
     display: flex;
@@ -825,14 +837,41 @@ span{
     margin: 0;
 }
 .user_char{
-    position: absolute;
-    top: 670px;
-    left: 100px;
     display: flex;
     flex-direction: row;
     color: #fff;
     gap: 40px;
     align-items: flex-end;
+}
+.avatar_circle{
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 0;
+}
+.avatar_circle:hover{
+    border: 3px solid #00C7E6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.avatar_circle:hover img{
+    filter: blur(3px);
+}
+.avatar_circle img, .avatar_camera{
+    transition: 0.2s;
+}
+.avatar_camera{
+    width: 55px;
+    position: absolute;
+    opacity: 0.7;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    top: 33%;
+    left: 34%;
+}
+.avatar_circle:hover .avatar_camera{
+    display: block;
 }
 .favorite_main_block .section_header{
     padding-bottom: 20px;
@@ -896,6 +935,7 @@ footer{
 }
 .container .footer_column:nth-child(3){
     text-align: end;
+    width: 40%;
 }   
 .footer_column:nth-child(3) a:nth-child(1), .footer_column:nth-child(3) a:nth-child(2){
     font-size: 24px;
