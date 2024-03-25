@@ -718,13 +718,17 @@ span{
     flex-direction: column;
     gap: 15px;
 }
+.right_part_film{
+    width: 75%;
+}
 .left_part_film{
+    width: 25%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .film_image_slug img{
-    width: 1300px;
+    width: 100%;
     height: auto;
     border: 3px solid transparent;
     border-image: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
@@ -1052,10 +1056,10 @@ footer .mobile_none{
     .section_header h1, .left_part_beginnings .section_header h1{
         font-size: 42px;
     }
-    .swiper-slide{
+    /* .swiper-slide{
         padding-left: 90px;
         width: 80% !important;
-    }
+    } */
     .left_part_beginnings, .right_part_beginnings{
         width: 100%;
     }

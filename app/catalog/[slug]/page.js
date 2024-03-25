@@ -8,6 +8,7 @@ export default async function page({params}) {
     const films = await getFilms();
     const name = () => ({__html: film.data[0].attributes.name})
     const desc = () => ({__html: film.data[0].attributes.description})
+    console.log(film.data[0].attributes)
   return (
     <main className='container m-auto'>
         <section className='main_part_film'>
@@ -30,10 +31,15 @@ export default async function page({params}) {
         </section>
         
         <section className='film_look'>
+
+                {film.data[0].attributes.film_view.data != null || !film.data[0].attributes.develop?(
+                    <div className='container'>
+                        <video>{film.data[0].attributes.url}</video>
+                    </div>
+                ):(
+                    <p className='text-center text-[50px]'>Находится в разработке</p>
+                )}
                 
-                <div className='container'>
-                    <video>{film.data[0].attributes.video}</video>
-                </div>
         
         </section>
         
@@ -49,7 +55,12 @@ export default async function page({params}) {
 
                     {films.data.map(film => (
                         <a href={`/catalog/${film.attributes.slug}`}>
-                            <div className='film'>
+                            <div className='film relative'>
+                                {film.attributes.develop?(
+                                    <div className='absolute top-[0px] left-[0px] bg-[#000000BB] flex justify-center items-center h-[87%] z-[1]'>
+                                        <p className='text-center'>Находится в разработке</p>   
+                                    </div>
+                                ):("")}
                                 <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
                                 <p className='film_name'>{film.attributes.title}</p>
                             </div>

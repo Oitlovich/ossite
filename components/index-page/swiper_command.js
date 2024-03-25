@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/autoplay';
+// import 'swiper/css/autoplay';
 import Image from 'next/image';
 
 export default function SwiperActors({actors, DB_HOST}){
@@ -14,10 +14,24 @@ export default function SwiperActors({actors, DB_HOST}){
             </div>
              
             <Swiper className='command_slider m-auto w-[100%]'
+            breakpoints={{
+                576: {
+                  slidesPerView: 2,
+                },
+                769: {
+                  slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                  },
+              }}
             spaceBetween={50} 
-            slidesPerView={4}
+            slidesPerView={1}
             modules ={[Autoplay]}
-            Autoplay>
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}>
 
                 {actors.data.map(actor => (
                     <SwiperSlide key={actor.id}>

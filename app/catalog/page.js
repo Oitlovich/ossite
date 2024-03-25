@@ -5,7 +5,6 @@ import { getSerials } from '@/services/serials';
 export default async function page() {
   const films = await getFilms();
   const serials = await getSerials();
-  // const name = () => ({__html: films.data.attributes.name})
   return (
     <main className='container m-auto'>
       <section className='catalog'>
@@ -84,7 +83,7 @@ export default async function page() {
    
         <div className='catalog_right'>
 
-          <div className='filter_names'>
+          {/* <div className='filter_names'>
             
             <div className='filter_applyes'>
               <div className='filter_apply'>ЖАНР</div>
@@ -93,10 +92,9 @@ export default async function page() {
               <div className='filter_apply'>ЖАНР</div>
             </div>
 
-            <div className='mobile_block'>
+          </div> */}
+          <div className='mobile_block'>
               <button className='filter_apply'>Фильтры</button>
-            </div>
-
           </div>
 
           <div className='catalog_objects'>
@@ -104,58 +102,18 @@ export default async function page() {
               {films.data.map(film => (
                 
                 <a href={`/catalog/${film.attributes.slug}`}>
-                  <div className='film'>
+                  <div className='film relative flex justify-center items-center'>
+                    {film.attributes.develop?(
+                      <div className='absolute top-[0px] left-[0px] bg-[#000000BB] flex justify-center items-center h-[87%] z-[1]'>
+                        <p className='text-center'>Находится в разработке</p>   
+                      </div>
+                    ):("")}
                     <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
                     <p className='film_name'>{film.attributes.title}</p>
-                    {/* <p className='film_name' dangerouslySetInnerHTML={name()}></p> */}
                   </div>
                 </a>
                 
               ))}
-
-            {/* <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/loki.png"></Image>
-                <p>Локи</p>
-              </div>
-            </a>
-
-            <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/loki.png"></Image>
-                <p>Локи</p>
-              </div>
-            </a>
-            <a href='/filmpage'>  
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/loki.png"></Image>
-                <p>Бесконечность</p>
-              </div>
-            </a>
-            <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/Oderzhimost.png"></Image>
-                <p>Одержимость</p>
-              </div>
-            </a>
-            <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/Joker.png"></Image>
-                <p>Джокер</p>
-              </div>
-            </a>
-            <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/mandalorec.png"></Image>
-                <p>Мандалорец</p>
-              </div>
-            </a>
-            <a href='/filmpage'>
-              <div className='film'>
-                <Image className='film_img' width={220} height={350} src="/images/Uchitelnazamenu.png"></Image>
-                <p>Учитель на замену</p>
-              </div>
-            </a> */}
 
           </div>
 

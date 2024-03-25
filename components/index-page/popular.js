@@ -21,18 +21,10 @@ export default async function Popular(){
                     <a href={`/catalog/${film.attributes.slug}`}>
                         <div className='film'>
                             <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                            <p className='film_name'>{film.attributes.name}</p>
+                            <p className='film_name'>{film.attributes.title}</p>
                         </div>
                     </a>
                     
-                ))}
-                {serials.data.map(serial => (
-                    <a href={`/catalog/${serial.attributes.slug}`}>
-                        <div className='film'>
-                            <Image className='film_img' width={220} height={350} src={serial.attributes.cover.data.attributes.url}></Image>
-                            <p className='film_name'>{serial.attributes.name}</p>
-                        </div>
-                    </a>
                 ))}
             
             </div>
