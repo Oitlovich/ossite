@@ -5,7 +5,7 @@ import SwiperActors from '@/components/index-page/swiper_command';
 import Banner from '@/components/index-page/banner';
 import Popular from '@/components/index-page/popular';
 import Beginnings from '@/components/index-page/beginnings';
-// import SwiperPopular from '@/components/swiper_popular';
+// import SwiperPopular from '@/components/index-page/swiper_popular';
 
 export default async function page() {
   const films = await getFilms();
@@ -20,7 +20,7 @@ export default async function page() {
       
       <Popular/>
 
-      {/* <SwiperPopular films={films}/> */}
+      {/* <SwiperPopular films={films} DB_HOST={process.env.DB_HOST}/> */}
 
       <Beginnings/>
     

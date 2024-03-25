@@ -22,3 +22,15 @@ export const getFilm = async (slug) => {
   
     return response.json();
 };
+// export const getFilmPageContent = async () => {
+//     const response = await fetch(`${process.env.DB_HOST}/api/film-page?populate=*`, { 
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//     });
+  
+//     if (!response.ok) throw new Error("Unable to fetch posts.");
+  
+//     return response.json();
+// };

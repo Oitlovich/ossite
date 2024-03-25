@@ -2,9 +2,12 @@ import Image from 'next/image'
 import { getFilm } from '@/services/films';
 import { getFilms } from '@/services/films';
 
+
 export default async function page({params}) {
     const film = await getFilm(params.slug);
     const films = await getFilms();
+    const name = () => ({__html: film.data[0].attributes.name})
+    const desc = () => ({__html: film.data[0].attributes.description})
   return (
     <main className='container m-auto'>
         <section className='main_part_film'>
@@ -18,10 +21,10 @@ export default async function page({params}) {
         
             <div className='right_part_film'>
                 <div className='text_block1'>
-                    <h1>{film.data[0].attributes.name}</h1>
+                    <h1 dangerouslySetInnerHTML={name()}></h1>
                 </div>
                 <div className='text_block2'>
-                    <p>{film.data[0].attributes.description}</p>
+                    <p dangerouslySetInnerHTML={desc()}></p>
                 </div>
             </div>
         </section>
