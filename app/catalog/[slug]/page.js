@@ -51,7 +51,7 @@ export default async function page({params}) {
                         <a href={`/catalog/${film.attributes.slug}`}>
                             <div className='film'>
                                 <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                                <p className='film_name'>{film.attributes.name}</p>
+                                <p className='film_name'>{film.attributes.title}</p>
                             </div>
                         </a>
                     ))}

@@ -5,6 +5,7 @@ import { getSerials } from '@/services/serials';
 export default async function page() {
   const films = await getFilms();
   const serials = await getSerials();
+  // const name = () => ({__html: films.data.attributes.name})
   return (
     <main className='container m-auto'>
       <section className='catalog'>
@@ -105,7 +106,8 @@ export default async function page() {
                 <a href={`/catalog/${film.attributes.slug}`}>
                   <div className='film'>
                     <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                    <p className='film_name'>{film.attributes.name}</p>
+                    <p className='film_name'>{film.attributes.title}</p>
+                    {/* <p className='film_name' dangerouslySetInnerHTML={name()}></p> */}
                   </div>
                 </a>
                 

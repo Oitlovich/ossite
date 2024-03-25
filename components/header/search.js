@@ -20,7 +20,7 @@ export function Searcher({dropped_catalog, DB_HOST}){
                 <div className="dropped_search bg-[#000] absolute top-[38px] border-solid border-[1px] border-[#00C7E6] w-[100%] flex flex-col p-[20px] ">
                     
                     {dropped_catalog.data.map(film => {
-                        if(film.attributes.name.toLowerCase().includes(values.toLowerCase().trim())){
+                        if(film.attributes.title.toLowerCase().includes(values.toLowerCase().trim())){
                             return(
                                 <a href={`/catalog/${film.attributes.slug}`}>
                                     <hr className="dropped_hr my-[15px] bg-[#000] h-[2px]"/>
@@ -29,7 +29,7 @@ export function Searcher({dropped_catalog, DB_HOST}){
                                             <Image className='dropped_film_img w-[70%]' width={220} height={350} src={DB_HOST+film.attributes.cover.data.attributes.url}></Image>
                                         </div>
                                         <div className="w-[50%] flex justify-center items-center">
-                                            <p className='dropped_film_name text-[23px]'>{film.attributes.name}</p>
+                                            <p className='dropped_film_name text-[23px]'>{film.attributes.title}</p>
                                         </div>
                                     </div>
                                     <hr className="dropped_hr mt-[15px] bg-[#000] h-[2px]"/>

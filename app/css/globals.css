@@ -719,14 +719,18 @@ span{
     gap: 15px;
 }
 .left_part_film{
-    width: 120vw;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .film_image_slug img{
-    width: 100%;
+    width: 1300px;
     height: auto;
+    border: 3px solid transparent;
+    border-image: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
+    -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    -webkit-border-image: -webkit-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
+    border-image-slice: 1;
 }
 .film_image img{
     width: 455px;
