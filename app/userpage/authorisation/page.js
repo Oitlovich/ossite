@@ -3,7 +3,7 @@ export default function page() {
       <main className="">
         <section className="authorisation">
             <div className="authorisation_inputs">
-              <h1>Авторизация</h1>
+              <h1 className="text-[40px]">Авторизация</h1>
               <div className="inputs">
                   <input placeholder="Введите логин"></input>
                   <input placeholder="Введите пароль"></input>

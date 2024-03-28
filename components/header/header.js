@@ -5,7 +5,7 @@ import { getFilms } from '@/services/films'
 export default async function Header() {
   const films = await getFilms();
   return (
-      <header>
+      <header className=''>
         <div className='container'>
           <div className='header_mainpart'>
             <a className='logo_link' href='/'><Image src="/icons/NewOSLogo.png" width={133} height={60}></Image></a>
@@ -17,8 +17,10 @@ export default async function Header() {
               <Searcher dropped_catalog = {films} DB_HOST = {process.env.DB_HOST}/>
             </nav>
             <a href='/userpage/authorisation' className='authorisation_button'>Войти</a>
-            <div className='mobile_block'>
-              <svg xmlns="http://www.w3.org/2000/svg" stroke='#fff' viewBox="0 0 32 32"><g id="_115_menu-01" data-name="115 menu-01"><rect x="4" y="15" width="24" height="2"/><rect x="4" y="6" width="24" height="2"/><rect x="4" y="24" width="24" height="2"/></g></svg>
+            <div className='burger_button'>
+              <svg width="35" height="19" className='burger_button hidden' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
             </div>
           </div>
         </div>

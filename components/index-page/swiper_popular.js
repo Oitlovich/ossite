@@ -11,7 +11,7 @@ export default async function SwiperPopular({films}){
             
         <div className='popular_header'>
             <h1><span>П</span>опулярное</h1>
-            <a href='/catalog'>Показать больше</a>   
+            <a className='popular_link' href='/catalog'>Показать больше</a>   
         </div>
         
         <div className='popular_main'>
