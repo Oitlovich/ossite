@@ -36,7 +36,7 @@ export default function SwiperActors({actors, DB_HOST}){
                 {actors.data.map(actor => (
                     <SwiperSlide key={actor.id}>
                         <div className='command_element'>
-                            <Image className='command_image' src={DB_HOST+actor.attributes.Photo.data.attributes.url} width={300} height={300}></Image>
+                            <Image className='command_image' alt="Изображение команды" src={DB_HOST+actor.attributes.Photo.data.attributes.url} width={300} height={300}></Image>
                             <div>
                                 <p>{actor.attributes.ActorName}</p>
                             </div>

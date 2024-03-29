@@ -14,7 +14,7 @@ export default function Beginnings(){
           </div>
           
           <div className='right_part_beginnings '>
-            <a className="beginnings_img_link" href='https://t.me/oitlovich_st'><Image className='telegram_image' src="/images/telegramm.png" width={333} height={436}></Image></a>
+            <a className="beginnings_img_link" href='https://t.me/oitlovich_st'><Image className='telegram_image' alt="Изображение телеграм кода" src="/images/telegramm.png" width={333} height={436}></Image></a>
           </div>
         </section>
 
@@ -28,7 +28,7 @@ export default function Beginnings(){
             <p>Всё начиналось в августе 2020 года. Александр Копаев попробовал озвучить несколько моментов из сериала Marvel "Локи". Другие несколько людей, смотря ролик, оценивали его как хорошее начало.</p>
             
             <div className='right_part_beginnings '>
-              <a className="beginnings_img_link" href='https://t.me/oitlovich_st'><Image className='telegram_image' src="/images/telegramm.png" width={333} height={436}></Image></a>
+              <a className="beginnings_img_link" href='https://t.me/oitlovich_st'><Image className='telegram_image' alt="Изображение телеграм кода" src="/images/telegramm.png" width={333} height={436}></Image></a>
             </div>
             
             <p>Далее уже озвучивались не отрывки, а целый сериал. Всё начилось с "Локи" - первого сезона. Во время работы над первым сезоном Локи, к Александру присоединился Никита Мальцев. Но мы решили, что первый сезон так и останется одноголосым. Первым совместным же проектом стал фильм "Бесконечность".</p>

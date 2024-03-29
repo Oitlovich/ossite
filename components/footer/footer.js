@@ -7,7 +7,7 @@ export default function Footer() {
       <div className='mobile_none container m-auto'>
     
         <div className='footer_column'>
-          <a href='/'><Image src="/icons/NewOSLogo.png" width={133} height={64}></Image></a>
+          <a href='/'><Image src="/icons/NewOSLogo.png" alt="Изображение логотипа" width={133} height={64}></Image></a>
           <a href='/'>Главная</a>
           <a href='/catalog'>Каталог</a>
         </div>

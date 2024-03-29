@@ -4,25 +4,28 @@ import anime from "animejs"
 
 export default function BurgerBtn(){
     function BurgerClick() {
-        if(document.querySelector('.burger_menu').classList.contains('active')) {
-            document.querySelector('.burger_menu').classList.remove('active')
-    
-            anime({
-                targets: '.burger_menu',
-                top: '-100vh',
-                duration: 500,
-                easing: 'spring(1, 100, 20, 10)'
-            })
-        }
-        else {
-            document.querySelector('.burger_menu').classList.add('active')
-            
-            anime({
-                targets: '.burger_menu.active',
-                top: '0vh',
-                duration: 700,
-                easing: 'spring(1, 100, 15, 5)'
-            })
+        console.log(document.querySelector('.burger_menu'))
+        if(document.querySelector('.burger_menu')){
+            if(document.querySelector('.burger_menu').classList.contains('active')) {
+                document.querySelector('.burger_menu').classList.remove('active')
+        
+                anime({
+                    targets: '.burger_menu',
+                    top: '-100vh',
+                    duration: 500,
+                    easing: 'spring(1, 100, 20, 10)'
+                })
+            }
+            else {
+                document.querySelector('.burger_menu').classList.add('active')
+                
+                anime({
+                    targets: '.burger_menu.active',
+                    top: '0vh',
+                    duration: 700,
+                    easing: 'spring(1, 100, 15, 5)'
+                })
+            }
         }
     }
 

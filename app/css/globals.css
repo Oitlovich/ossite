@@ -172,7 +172,7 @@ input:focus{
 .header_links a p{
     margin: 0;
 }
-.authorisation_button{
+.authorisation_button, .authorisation_button_mobile{
     font-size: 20px;
     color: #fff;
     display: flex;
@@ -186,6 +186,9 @@ input:focus{
     height: 46px;
     cursor: pointer;
     transition: 0.2s;
+}
+.authorisation_button_mobile{
+    font-size: 25px
 }
 /* ----------Фиксированный нав---------- */
 .nav_bar_section_nodisplay {
@@ -263,7 +266,7 @@ input:focus{
 }
 /* --------------Конец Авторизация---------------- */
 
-.authorisation_button:hover, .button_clean:hover, .film_favorite:hover{
+.authorisation_button:hover, .button_clean:hover, .film_favorite:hover, .authorisation_button_mobile:hover{
     font-weight: 500;
     letter-spacing: 1px;
     color: #00C7E6;

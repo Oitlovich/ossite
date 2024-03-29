@@ -61,7 +61,7 @@ export default async function page({params}) {
                                         <p className='text-center'>Находится в разработке</p>   
                                     </div>
                                 ):("")}
-                                <Image className='film_img' width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
+                                <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
                                 <p className='film_name'>{film.attributes.title}</p>
                             </div>
                         </a>
