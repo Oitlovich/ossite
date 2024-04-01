@@ -1,18 +1,14 @@
-import Image from 'next/image'
-import { getFilms } from '@/services/films';
-import { getSerials } from '@/services/serials';
-import FiltersBtn from '@/components/catalog/filtersbtn';
-import FiltersMenu from '@/components/catalog/filtersmenu';
+import FiltersBtn from "./filtersbtn"
+import Image from "next/image"
 
-export default async function page() {
-  const films = await getFilms();
-  const serials = await getSerials();
-  return (
-    <main className='container m-auto'>
-      <section className='catalog'>
-        <div className='catalog_left'>
-          
-          <form className='catalog_filter'>
+export default function FiltersMenu(){
+    return(
+        <div className="filter_menu fixed p-[40px] left-[0px] top-[-100vh] h-[100vh] w-screen bg-[#000] z-[99999] rounded-[10px]">
+            <div className="flex flex-row justify-between h-[10%]">
+                <a className='logo_link' href='/'><Image src="/icons/NewOSLogo.png" alt="Изображение логотипа" width={133} height={60}></Image></a>
+                <FiltersBtn/>
+            </div>
+            <form className='catalog_filter_mobile'>
           
             <div className='filter_point'>
               <p>Жанр</p>
@@ -79,51 +75,7 @@ export default async function page() {
             </div>
             
             <button className='button_clean' type='reset'>Сбросить</button>
-          </form>          
-        
+          </form> 
         </div>
-   
-        <div className='catalog_right'>
-
-          {/* <div className='filter_names'>
-            
-            <div className='filter_applyes'>
-              <div className='filter_apply'>ЖАНР</div>
-              <div className='filter_apply'>ЖАНР</div>
-              <div className='filter_apply'>ЖАНР</div>
-              <div className='filter_apply'>ЖАНР</div>
-            </div>
-
-          </div> */}
-          <FiltersMenu/>
-          <div className='filter_apply'>
-            Фильтры
-          </div>
-          <div className='absolute left-[8%] w-[40%]'>
-            <FiltersBtn/>
-          </div>
-          <div className='catalog_objects'>
-
-              {films.data.map(film => (
-                
-                <a href={`/catalog/${film.attributes.slug}`}>
-                  <div className='film relative flex justify-center items-center'>
-                    {film.attributes.develop?(
-                      <div className='absolute top-[0px] left-[0px] bg-[#000000BB] flex justify-center items-center h-[87%] z-[1]'>
-                        <p className='text-center'>Находится в разработке</p>   
-                      </div>
-                    ):("")}
-                    <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                    <p className='film_name'>{film.attributes.title}</p>
-                  </div>
-                </a>
-                
-              ))}
-
-          </div>
-
-        </div>
-      </section>
-    </main>
-  )
-}
+    )
+} 

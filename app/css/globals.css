@@ -1103,7 +1103,7 @@ footer .mobile_none{
         justify-content: space-between;
     }
     .catalog_objects a{
-        width: 39%;
+        width: 100%;
     }
     .filter_apply{
         width: 215px;
@@ -1169,5 +1169,21 @@ footer .mobile_none{
     }
     .authorisation_inputs h1{
         font-size: 41px;
+    }
+    .button_clean{
+        margin-top: 0;
+        width: 100%;
+    }
+    .input_label_custom{
+        font-size: 30px;
+    }
+    .option-input:checked::before{
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+    }
+    .option-input{
+        height: 20px;
+        width: 20px;
     }
 }

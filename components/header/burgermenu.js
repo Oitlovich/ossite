@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function BurgerMenu(){
     return(
-        <div className="burger_menu absolute p-[40px] left-[0px] top-[-100vh] h-[100vh] w-screen bg-[#000] z-[10] rounded-[10px]">
+        <div className="burger_menu fixed p-[40px] left-[0px] top-[-100vh] h-[100vh] w-screen bg-[#000] z-[10] rounded-[10px]">
             <div className="flex flex-row justify-between h-[10%]">
                 <a className='logo_link' href='/'><Image src="/icons/NewOSLogo.png" alt="Изображение логотипа" width={133} height={60}></Image></a>
                 <BurgerBtn/>

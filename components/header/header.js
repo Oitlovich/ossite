@@ -26,11 +26,13 @@ export default async function Header() {
               </svg>
             </div> */}
             <BurgerMenu/>
-            <svg width="35" height="19" className='absolute right-[8%]' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <div className='opacity-0 absolute right-[8%]'>
-              <BurgerBtn/>
+            <div className='mobile_block'>
+              <svg width="35" height="19" className='absolute right-[8%]' viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1H31M1 8H24.75M1 15H31" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div className='opacity-0 absolute right-[8%]'>
+                <BurgerBtn/>
+              </div>
             </div>
           </div>
         </div>
