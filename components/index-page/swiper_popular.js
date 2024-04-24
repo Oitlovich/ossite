@@ -10,7 +10,7 @@ export default async function SwiperPopular({films}){
         <section className='popular mobile_block'>
             
         <div className='popular_header'>
-            <h1><span>П</span>опулярное</h1>
+            <h1><span>Н</span>овинки</h1>
             <a className='popular_link' href='/catalog'>Показать больше</a>   
         </div>
         
@@ -34,12 +34,14 @@ export default async function SwiperPopular({films}){
 
                 {films.data.map(film => (
                     <SwiperSlide>
-                        <a href={`/catalog/${film.attributes.slug}`}>
-                            <div className='film'>
-                                <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
-                                <p className='film_name'>{film.attributes.title}</p>
-                            </div>
-                        </a>
+                        {film.attributes.new?(
+                            <a href={`/catalog/${film.attributes.slug}`}>
+                                <div className='film'>
+                                    <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
+                                    <p className='film_name'>{film.attributes.title}</p>
+                                </div>
+                            </a>
+                        ):("")}
                     </SwiperSlide>
                 ))}
             </Swiper>
