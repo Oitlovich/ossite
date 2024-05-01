@@ -823,7 +823,7 @@ span{
 .userpage_img img{
     opacity: 0.4;
 }
-.user_char_text input{
+.user_char_text p{
     color: #aaaaaa;
     font-family: sansation_light;
 }

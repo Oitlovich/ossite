@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 
-export function Searcher({dropped_catalog, DB_HOST}){
+export function Searcher({dropped_catalog}){
     const[values, setValue] = useState('');
     
     return(
@@ -26,7 +26,7 @@ export function Searcher({dropped_catalog, DB_HOST}){
                                     <hr className="dropped_hr my-[15px] bg-[#000] h-[2px]"/>
                                     <div className='dropped_film_card flex flex-row justify-between'>
                                         <div className="w-[50%] flex justify-center items-center">
-                                            <Image className='dropped_film_img w-[70%]' alt="Изображение фильма" width={220} height={350} src={DB_HOST+film.attributes.cover.data.attributes.url}></Image>
+                                            <Image className='dropped_film_img w-[70%]' alt="Изображение фильма" width={220} height={350} src={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.attributes.cover.data.attributes.url}></Image>
                                         </div>
                                         <div className="w-[50%] flex justify-center items-center">
                                             <p className='dropped_film_name text-[23px]'>{film.attributes.title}</p>

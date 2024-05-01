@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import Image from 'next/image';
 
-export default async function SwiperFavorite({films}){
+export default function SwiperFavorite({films}){
     return(
         <section className='favorite_films mobile_block'>
         

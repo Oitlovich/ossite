@@ -16,11 +16,11 @@ export default async function page() {
     
       <Banner/>
     
-      <SwiperActors actors={actors} DB_HOST={process.env.DB_HOST}/>
+      <SwiperActors actors={actors}/>
       
       <Popular/>
 
-      <SwiperPopular films={films} DB_HOST={process.env.DB_HOST}/>
+      <SwiperPopular films={films}/>
 
       <Beginnings/>
     
