@@ -11,7 +11,7 @@ export default function AuthButton(){
     }
     else{
         return(
-            <a href='/userpage/authorisation' className='authorisation_button'>Войти</a>
+            <a href='/userpage/authorisation' className='authorisation_button flex items-center justify-center'>Войти</a>
         )
     }
    

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { getFilm } from '@/services/films';
 import { getFilms } from '@/services/films';
+import FavoriteFilm from '@/components/catalog/favorite';
 
 
 export default async function page({params}) {
@@ -17,7 +18,7 @@ export default async function page({params}) {
                 <div className='film_image_slug'>
                     <Image className='' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
                 </div>
-                <button className='film_favorite'>В избранное</button>
+                <FavoriteFilm/>
             </div>
         
             <div className='right_part_film'>
