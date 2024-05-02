@@ -9,7 +9,7 @@ export default async function page({params}) {
     const films = await getFilms();
     const name = () => ({__html: film.data[0].attributes.name})
     const desc = () => ({__html: film.data[0].attributes.description})
-    console.log(film.data[0].attributes)
+    console.log(film.data[0].attributes.film_view.data.attributes.url)
   return (
     <main className='container m-auto'>
         <section className='main_part_film'>
@@ -35,7 +35,8 @@ export default async function page({params}) {
 
                 {film.data[0].attributes.film_view.data != null || !film.data[0].attributes.develop?(
                     <div className='container'>
-                        <video>{film.data[0].attributes.url}</video>
+                        {/* <video>{film.data[0].attributes.url}</video> */}
+                        <video>{film.data[0].attributes.film_view.data.attributes.url}</video>
                     </div>
                 ):(
                     <p className='text-center text-[50px]'>Находится в разработке</p>
