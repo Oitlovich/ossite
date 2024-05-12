@@ -1,5 +1,6 @@
 import BurgerBtn from "./burgerbtn"
 import Image from "next/image"
+import AuthButton from "./authbutton"
 
 export default function BurgerMenu(){
     return(
@@ -12,7 +13,7 @@ export default function BurgerMenu(){
                 <a className="text-[30px]" href="/">Главная</a>
                 <a className="text-[30px]" href="/catalog">Каталог</a>
                 <a className="hidden text-center text-[30px]" href="/">Личный кабинет</a>
-                <a href='/userpage/authorisation' className='authorisation_button_mobile'>Войти</a>
+                <AuthButton/>
             </div>
         </div>
     )

@@ -5,9 +5,9 @@ export default function page() {
             <div className="authorisation_inputs">
                 <h1 className="text-[40px]">Регистрация</h1>
                 <div className="inputs">
-                    <input placeholder="Введите логин"></input>
-                    <input placeholder="Введите пароль"></input>
-                    <input placeholder="Повторите пароль"></input>
+                    <input className="bg-[#000]" placeholder="Введите логин"></input>
+                    <input className="bg-[#000]" placeholder="Введите пароль" type="password"></input>
+                    <input className="bg-[#000]" placeholder="Повторите пароль" type="password"></input>
                     <input placeholder="Введите ФИО"></input>
                     <input placeholder="Введите E-mail"></input>
                 </div>

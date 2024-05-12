@@ -6,7 +6,7 @@ export default function AuthButton(){
     const user = useSelector(state => state.user.userData)
     if (user){
         return(
-            <a href='/userpage' className='authorisation_button'>{user.username}</a>
+            <a href='/userpage' className='authorisation_button_user'>{user.username}</a>
         ) 
     }
     else{

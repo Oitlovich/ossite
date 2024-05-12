@@ -36,8 +36,8 @@ export default function Auth() {
             <form onSubmit={onSubmit} className="authorisation_inputs">
               <h1 className="text-[40px]">Авторизация</h1>
               <div className="inputs">
-                  <input placeholder="Введите логин" value={email} onChange={e => setEmail(e.target.value)}></input>
-                  <input placeholder="Введите пароль" value={pass} onChange={e => setPass(e.target.value)}></input>
+                  <input className="bg-[#000]" placeholder="Введите логин" value={email} onChange={e => setEmail(e.target.value)}></input>
+                  <input className="bg-[#000]" placeholder="Введите пароль" type="password" value={pass} onChange={e => setPass(e.target.value)}></input>
               </div>
               <button type="submit" className='authorisation_button'>Войти</button>
               <a href="/userpage/registration" className="inputs_link">Нет аккаунта?</a>

@@ -1,7 +1,6 @@
 "use client"
 import FiltersMenu from './filtersmenu';
 import FiltersBtn from './filtersbtn';
-import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import Product from './object';
 
@@ -38,7 +37,7 @@ export default function Catalog({films}){
         return(
             <section>
                 <FiltersMenu/>
-                <div className='filter_apply mobile_block'>
+                <div className='filter_apply top-[-50px] z-[2] w-[100%] h-[50px] mobile_block'>
                     Фильтры
                 </div>
                 <div className='absolute left-[8%] w-[40%]'>

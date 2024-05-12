@@ -4,7 +4,7 @@ export default function Product({film}){
         <a href={`/catalog/${film.attributes.slug}`}>
             <div className='film relative flex justify-center items-center'>
                 {film.attributes.develop?(
-                <div className='absolute top-[0px] left-[0px] bg-[#000000BB] flex justify-center items-center h-[87%] z-[1]'>
+                <div className='develop absolute top-[0px] left-[0px] bg-[#000000BB] flex justify-center items-center h-[86%] z-[1]'>
                     <p className='text-center'>Находится в разработке</p>   
                 </div>
                 ):("")}

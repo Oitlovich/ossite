@@ -11,7 +11,7 @@ export default function FavoriteFilm(){
     }
     else{
         return(
-            <a href='/userpage/authorisation' className='film_favorite'>Войти</a>
+            <a href='/userpage/authorisation' className='film_favorite flex justify-center items-center'>Войти</a>
         )
     }
    
