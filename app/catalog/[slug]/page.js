@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { getFilm } from '@/services/films';
 import { getFilms } from '@/services/films';
 import FavoriteFilm from '@/components/catalog/favorite';
-import Video from 'next-video'
+import FilmPlayer from '@/components/film/player';
 
 export default async function page({params}) {
     const film = await getFilm(params.slug);
@@ -10,14 +10,13 @@ export default async function page({params}) {
     const name = () => ({__html: film.data[0].attributes.name})
     const desc = () => ({__html: film.data[0].attributes.description})
     if(film){
-    // console.log(film.data[0].attributes.film_view.data.attributes)
     return (
         <main className='container m-auto'>
             <section className='main_part_film'>
                 
                 <div className='left_part_film'>
                     <div className='film_image_slug'>
-                        <Image className='' width={220} height={350} src={film.data[0].attributes.cover.data.attributes.url}></Image>
+                        <Image className='' width={220} height={350} src={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.data[0].attributes.cover.data.attributes.url}></Image>
                     </div>
                     <FavoriteFilm/>
                 </div>
@@ -37,8 +36,7 @@ export default async function page({params}) {
                     {film.data[0].attributes.film_view.data != null || !film.data[0].attributes.develop?(
                         <div className='container'>
                             {/* <video>{film.data[0].attributes.url}</video> */}
-                            {/* <FilmPlayer film_player={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.data[0].attributes.film_view.data.attributes.url}/> */}
-                            <Video accentColor='#00C7E6' src={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.data[0].attributes.film_view.data.attributes.url}/>
+                            <FilmPlayer film_player={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.data[0].attributes.film_view.data.attributes.url}/>
                         </div>
                     ):(
                         <p className='text-center text-[50px]'>Находится в разработке</p>

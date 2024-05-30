@@ -10,7 +10,6 @@ export default async function page() {
   const films = await getFilms();
   const serials = await getSerials();
 
-
   return (
     <main className='container m-auto'>
       <section className='catalog'>

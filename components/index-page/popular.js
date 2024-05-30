@@ -21,7 +21,7 @@ export default async function Popular(){
                         return(
                             <a href={`/catalog/${film.attributes.slug}`}>
                                 <div className='film'>
-                                    <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={film.attributes.cover.data.attributes.url}></Image>
+                                    <Image className='film_img' alt="Изображение фильма" width={220} height={350} src={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.attributes.cover.data.attributes.url}></Image>
                                     <p className='film_name'>{film.attributes.title}</p>
                                 </div>
                             </a>

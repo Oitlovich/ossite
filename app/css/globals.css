@@ -41,6 +41,20 @@ body, html, main{
 ::-webkit-scrollbar-thumb:hover {
     background: #00C7E6;
 }
+.video-react-video{
+    display: flex;
+}
+.video-react-time-control span{
+    background: unset;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    font-family: unset;
+    font-size: unset;
+    font-style: unset;
+    font-weight: unset;
+    line-height: unset;
+}
 .option-input {
 -webkit-appearance: none;
 -moz-appearance: none;
