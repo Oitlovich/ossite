@@ -5,7 +5,7 @@ import anime from 'animejs'
 import BurgerBtn from './burgerbtn'
 import BurgerMenu from './burgermenu'
 import AuthButton from './authbutton'
-import GetUserInfo from '@/app/features/getUserInfo'
+import GetUserInfo from '@/app/features/getuserinfo'
 
 export default async function Header() {
   const films = await getFilms();

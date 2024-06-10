@@ -6,7 +6,6 @@ import QuitButton from '@/services/user/quitbutton'
 
 export default function UserChar({films}){
     const user = useSelector(state => state.user.userData)
-    console.log(user)
     if(user){
         return(
             <div className="container m-auto">

@@ -18,7 +18,7 @@ export default async function page({params}) {
                     <div className='film_image_slug'>
                         <Image className='' width={220} height={350} src={process.env.NEXT_PUBLIC_STRAPI_API_URL+film.data[0].attributes.cover.data.attributes.url}></Image>
                     </div>
-                    <FavoriteFilm/>
+                    <FavoriteFilm id={film.data[0].id} productsItems={films}/>
                 </div>
             
                 <div className='right_part_film'>

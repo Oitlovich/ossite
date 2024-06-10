@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { getFilms } from "@/services/films"
 import SwiperFavorite from "@/components/userpage/swiper_favorite";
-import GetUserInfo from "../features/getUserInfo";
+import GetUserInfo from "../features/getuserinfo";
 import CheckAuthUser from "../features/userInfo";
 import UserChar from "@/components/userpage/user_char";
 

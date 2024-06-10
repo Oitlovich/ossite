@@ -13,14 +13,14 @@ export default function Footer() {
         </div>
     
         <div className='footer_column'>
-          <a href='/registration'>Регистрация</a>
-          <a href='/autorisation'>Авторизация</a>
+          <a href='/userpage/registration'>Регистрация</a>
+          <a href='/userpage/autorisation'>Авторизация</a>
         </div>
     
         <div className='footer_column'>
-          <a href='#'>Политика конфиденциальности</a>
+          <a href='https://xn--80aapampemcchfmo7a3c9ehj.xn--p1ai/assets/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'>Политика конфиденциальности</a>
           <a href='https://t.me/oitlovich'>Обратная связь</a>
-          <a href='#'>© 2024 Все права защищены</a>
+          <p>© 2024 Все права защищены</p>
         </div>
     
       </div>
@@ -43,20 +43,20 @@ export default function Footer() {
         <div className='footer_row flex flex-row justify-between'>
 
           <div className='footer_row_column gap-[5px] flex flex-col'>
-            <a className='p-[0]' href='/'>Главная</a>
-            <a href='/catalog'>Каталог</a>
-            <a href='/registration'>Регистрация</a>
-            <a href='/autorisation'>Авторизация</a>
+            <a className='text-[20px] p-[0]' href='/'>Главная</a>
+            <a className='text-[20px]' href='/catalog'>Каталог</a>
+            <a className='text-[20px]' href='/userpage/registration'>Регистрация</a>
+            <a className='text-[20px]' href='/userpage/autorisation'>Авторизация</a>
           </div>
 
           <div className='footer_row_column flex gap-[15px] flex-col text-right'>
-            <a href='#'>Политика конфиденциальности</a>
-            <a href='https://t.me/oitlovich'>Обратная связь</a>
+            <a className='text-[20px]' href='https://xn--80aapampemcchfmo7a3c9ehj.xn--p1ai/assets/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'>Политика конфиденциальности</a>
+            <a className='text-[20px]' href='https://t.me/oitlovich'>Обратная связь</a>
           </div>
         </div>
     
         <div className='footer_row flex justify-center'>
-          <a href='#'>© 2024 Все права защищены</a>
+          <p>© 2024 Все права защищены</p>
         </div>
     
       </div>

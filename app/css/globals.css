@@ -485,7 +485,6 @@ span{
 .popular_main{
     display: flex;
     flex-direction: row;
-    gap: 45px;
 }
 .popular_main a{
     text-decoration: none;
@@ -909,10 +908,8 @@ span{
 .favorite_films{
     display: flex;
     flex-direction: row;
-    gap: 130px;
     justify-content: center;
     align-items: center;
-    height: 579px;
     border: 2px solid transparent;
     border-image: linear-gradient(180deg, #EC00FF 0%, #CC84FF 38.39%, #9BBFFF 75.39%, #009AFF 100%);
     -moz-border-image: -moz-linear-gradient(#EC00FF, #CC84FF, #9BBFFF , #009AFF);
@@ -945,7 +942,7 @@ footer{
     gap: 7px;
     color: #fff;
 }
-.footer_column a{
+.footer_column a, .footer_column p{
     color: #fff;
     font-size: 20px;
     font-weight: 300;
@@ -1070,7 +1067,7 @@ footer .mobile_none{
         margin-top: 50px;
     }
     .button1, .button2{
-        width: 40%;
+        width: 47%;
     }
     .mobile_block svg{
         fill: #fff;
@@ -1210,5 +1207,8 @@ footer .mobile_none{
     .option-input{
         height: 20px;
         width: 20px;
+    }
+    .favorite_row_column p, .favorite_row_column a{
+        font-size: 16px;
     }
 }

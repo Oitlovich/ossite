@@ -4,6 +4,7 @@ import { userInfo } from "@/services/user/userinfo"
 import { setUserData, setUserJwt } from "@/store/user/user.slice"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { getFavorites } from "@/store/favorite/favorite.slice"
 
 export default function GetUserInfo() {
     const dispatch = useDispatch()
@@ -12,14 +13,16 @@ export default function GetUserInfo() {
 
     useEffect(() => {
         const jwt = localStorage.getItem('userJWT');
-    
         if (jwt && !userJwt) {
             dispatch(setUserJwt(jwt));
-        } 
+        }
         if (jwt && !userData) {
             getInfo(jwt);
         }
-    }, [userJwt, userData]);
+        if(jwt) {
+            dispatch(getFavorites(jwt))
+        }
+    }, [userJwt, userData, dispatch]);
 
     async function getInfo(jwt) {
         try {
