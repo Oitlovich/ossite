@@ -6,12 +6,15 @@ import BurgerBtn from './burgerbtn'
 import BurgerMenu from './burgermenu'
 import AuthButton from './authbutton'
 import GetUserInfo from '@/app/features/getuserinfo'
+import ReCaptcha from '@/app/features/recaptcha'
+
 
 export default async function Header() {
   const films = await getFilms();
   return (
       <header className=''>
         <GetUserInfo/>
+        <ReCaptcha/>
         <div className='container'>
           <div className='header_mainpart'>
             <a className='logo_link' href='/'><Image src="/icons/NewOSLogo.png" alt="Изображение логотипа" width={133} height={60}></Image></a>

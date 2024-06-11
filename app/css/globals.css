@@ -55,7 +55,7 @@ body, html, main{
     font-weight: unset;
     line-height: unset;
 }
-.option-input {
+.option-input, .option-input2  {
 -webkit-appearance: none;
 -moz-appearance: none;
 -ms-appearance: none;
@@ -75,13 +75,13 @@ position: relative;
 z-index: 1000;
 border-radius: 5px;
 }
-.option-input:hover {
+.option-input:hover, .option-input2:hover {
 background: #ccd2d9;
 }
-.option-input:checked {
+.option-input:checked, .option-input2:checked {
 background: linear-gradient(180deg, #8C0083 0%, #890485 5.04%, #860887 10.19%, #820E89 15.46%, #7E148C 20.9%, #791A90 26.54%, #732393 32.39%, #6C2C98 38.5%, #64379D 44.88%, #5B44A3 51.58%, #5053AB 58.63%, #4464B3 66.04%, #3677BC 73.85%, #268DC6 82.1%, #14A6D2 90.8%, #00C7E6 100%);
 }
-.option-input:checked::before {
+.option-input:checked::before, .option-input2:checked::before {
 width: 17px;
 height: 17px;
 display:flex;
@@ -92,7 +92,18 @@ position: absolute;
 align-items:center;
 justify-content:center;
 }
-.option-input:checked::after {
+.option-input2{
+    height: 15px;
+    width: 15px;
+    display: flex !important;
+}
+.option-input2:checked::before{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.option-input:checked::after, .option-input2:checked::after {
 background: #40e0d0;
 content: '';
 display: block;

@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           <div className='footer_row_column flex gap-[15px] flex-col text-right'>
-            <a className='text-[20px]' href='https://xn--80aapampemcchfmo7a3c9ehj.xn--p1ai/assets/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf'>Политика конфиденциальности</a>
+            <a className='text-[20px]' href='/policy.pdf' download>Политика конфиденциальности</a>
             <a className='text-[20px]' href='https://t.me/oitlovich'>Обратная связь</a>
           </div>
         </div>
